@@ -1,7 +1,22 @@
+.. only:: latex
+
+   .. The following LaTeX directive turns on Appendix lettering,
+      rather than decimal numbering.
+
+   .. raw:: latex
+
+      \appendix
+
 .. _appendices:
 
 Appendices
 ==========
+
+.. only:: html
+
+   .. note:: Appendices in the HTML version are numbered, not designated by
+      letters as in the PDF version. This is a limitation of Sphinx.
+
 
 .. note:: TBD
 
@@ -11,6 +26,5 @@ Appendices
    document where the data would normally have been provided.  Appendices may
    be bound as separate documents for ease in handling.  Appendices shall be
    lettered alphabetically (A, B, etc.).
-
 
 
