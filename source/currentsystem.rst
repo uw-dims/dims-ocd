@@ -75,7 +75,7 @@ productivity, improved performance, and lower costs for participants.
 The intent of the PRISEM system is to combine standard security devices event
 log data using a commercial Security Information Event Management (SIEM)
 system, fed in part by event log data from the DHS-funded NetFlow based  system
-(formerly known as Einstein 1), correlating these events using the SIEM to
+(formerly known as :term:`Einstein 1`), correlating these events using the SIEM to
 detect structural bot activity that has a high probability of being an infected
 computer. It uses the Collective Intelligence Framework (CIF) database system
 to produce watchlists for real-time monitoring, as well as to provide
@@ -372,14 +372,14 @@ What can CIF do now?
 CIF provides a database of historic IOCs obtained from feeds that it consumes
 on a regular basis. In turn, CIF produces feeds of IOCs that can be used for
 watchlists, access control lists, IPS rules, etc. The PRISEM system uses CIF to
-produce watchlists that are used by the Python based `Botnets`_ detectors
+produce watchlists that are used by the Python based :term:`Botnets System` detectors
 processing real-time NetFlow V5 records sent from network devices for real-time
 detection of suspect flows. CIF correlates data in its tables, associating IOCs
 from multiple sources, as well as enriching the data by looking up ASNs, domain
 name to IP address associations, etc. Users can enter IOC data using CIF’s
 browser plug-in, the CIFglue application from Verizon, or through the CIF API.
 
-The PRISEM system also processes “SEARCH” records that are added to CIF when
+The PRISEM system also processes "SEARCH" records that are added to CIF when
 someone searches, putting those IP addresses or CIDR blocks that are searched
 for, but produce no results, into a watchlist. A more accurate way to do this
 is to have users explicitly put suspicious IP addresses or CIDR blocks into CIF
@@ -411,7 +411,7 @@ or storage limits. As part of the PRISEM deployment of CIF, mechanisms were put
 in place to regularly log the sizes of certain database tables and the database
 itself, and to log the amount of time it takes to pull feeds from outside
 sources, to perform correlation, and to index database tables (all processes
-that run from cron on a scheduled basis). This information has only been used
+that run from :term:`cron` on a scheduled basis). This information has only been used
 to answer questions at given points in time, but the intention was to perform
 linear regression on this data on a regular basis to estimate when resource
 limitations will be hit (e.g., when the disk drive is expected to be filled to
@@ -427,7 +427,7 @@ Why is this relevant?
 
 As CIF is a "work in progress" and constantly undergoing development, the
 community of users is often called upon to help identify bug fixes and feature
-additions that can be made available to the CIF development team via Git "pull"
+additions that can be made available to the CIF development team via :term:`Git` "pull"
 requests. This helps improve the generally available release of CIF and
 minimizes the need to maintain add-on patches independent of CIF releases.
 Since the intention of DIMS is to be replicated in many regions, each of which
@@ -443,7 +443,7 @@ THE PRISEM SYSTEM
 
 + Event collection, correlation, archiving
 + Distillation of hundreds of alerts per day from (low) tens of millions of events per day
-+ Integrates the NetFlow `Botnets`_ behavioral detection capability
++ Integrates the NetFlow :term:`Botnets System` behavioral detection capability
 + Requires intensive administration and coding when provisioning new tenants
 + Proprietary vendor portal the principal user interface
 
@@ -544,4 +544,3 @@ Support concept
 
 
 .. _HSPD-7: http://www.dhs.gov/homeland-security-presidential-directive-7
-.. _Botnets: http://web.archive.org/web/20131115180654/http://www.botnets.org/

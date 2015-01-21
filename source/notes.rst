@@ -24,8 +24,10 @@ Glossary of Terms
        development with long requirements definition, specification, design,
        build, test, acceptance, delivery sequences of steps.
 
-   Botnets (system)
-       The name given to the re-implementation of Einstein 1 technology.
+   Botnets System
+       The name given to the re-implementation of :term:`Einstein 1`
+       technology.  See
+       http://web.archive.org/web/20131115180654/http://www.botnets.org/
 
    cron
        A Unix/Linux service daemon that is responsible for running background
@@ -38,7 +40,8 @@ Glossary of Terms
        "Simple rails app to quickly add indicators to the Collective Intelligence
        Framework"
 
-   Cryptographic Hash/Cryptographic Hashing Algorithm
+   Cryptographic Hash
+   Cryptographic Hashing Algorithm
        A mathematical method of uniquely representing a stream of bits with a
        fixed-length numeric value in a numeric space sufficiently large so as to
        be infeasible to predictably generate the same hash value for two different
@@ -49,7 +52,7 @@ Glossary of Terms
    Einstein 1
        A network flow based behavioral and watchlist based detection system
        developed by University of Michigan and Merit Networks, Inc. for use by
-       US-CERT.
+       US-CERT. The re-implementation is known as the :term:`Botnets System`.
 
    Fusion Center
        Entities created by DHS to integrate federal law enforcement and

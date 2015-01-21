@@ -16,7 +16,7 @@ DIMS Operational Concept Description
     initiated. The intent of the *PRISEM* system is to combine standard security
     devices event log data using a commercial *Security Information Event
     Management (SIEM)* system, fed in part by event log data from the DHS-funded
-    NetFlow based system (formerly known as *Einstein 1*), correlating these
+    NetFlow based system (formerly known as :term:`Einstein 1`), correlating these
     events using the SIEM to detect structural bot activity that has a high
     probability of being an infected computer. It uses the *Collective
     Intelligence Framework (CIF)* database system to produce watchlists for

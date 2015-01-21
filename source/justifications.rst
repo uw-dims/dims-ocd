@@ -119,7 +119,7 @@ and observed attack signatures).
 MITRE defines *indicator* as, "[a] pattern of relevant observable adversary
 activity in the operational cyber domain along with contextual information
 regarding its interpretation (e.g., this domain has been compromised, this
-email is spoofed, this file hash is associated with this trojan, etc.),
+email is spoofed, this [:term:`cryptographic hash` of a file] is associated with this trojan, etc.),
 handling, etc. An Observable pattern captures what may be seen; the Indicator
 enumerates why this is Observable pattern is of interest." (`STIX FAQ #B1`_)
 One job of an analyst using the PRISEM system is to take *indicators* that are
@@ -134,7 +134,7 @@ stateful properties which can represent anything from the creation of a
 registry key on a host (measurable event) to the presence of a mutex (stateful
 property)." (Gragido, 2012) IOCs can include several pieces of raw intelligence
 that manifest at various points in time on information systems under attack,
-including "MD5 [and other cryptographic hashes of files], File names, Packer
+including "MD5 [and other :term:`cryptographic hash` values for files], File names, Packer
 types, Registry keys, Mutexes, DNS strings, and IP Addresses." (Mandiant, 2011)
 
 IOCs are the lowest-level pieces of evidence used to paint a much larger
