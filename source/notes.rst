@@ -18,80 +18,82 @@ Glossary of Terms
 
 .. glossary::
 
-Agile
-    A programming methodology based on short cycles of feature-specific changes
-    and rapid delivery, as opposed to the “Waterfall” model of system
-    development with long requirements definition, specification, design,
-    build, test, acceptance, delivery sequences of steps.
+   Agile
+       A programming methodology based on short cycles of feature-specific changes
+       and rapid delivery, as opposed to the "Waterfall" model of system
+       development with long requirements definition, specification, design,
+       build, test, acceptance, delivery sequences of steps.
 
-Botnets (system)
-    The name given to the re-implementation of Einstein 1 technology.
+   Botnets (system)
+       The name given to the re-implementation of Einstein 1 technology.
 
-cron
-    A Unix/Linux service daemon that is responsible for running background tasks on a scheduled basis.
+   cron
+       A Unix/Linux service daemon that is responsible for running background
+       tasks on a scheduled basis.
 
-Git
-    A source code version management system in widespread use.
+   Git
+       A source code version management system in widespread use.
 
-CIFglue
-    "Simple rails app to quickly add indicators to the Collective Intelligence Framework" 
+   CIFglue
+       "Simple rails app to quickly add indicators to the Collective Intelligence
+       Framework"
 
-Cryptographic Hash/Cryptographic Hashing Algorithm
-    A mathematical method of uniquely representing a stream of bits with a
-    fixed-length numeric value in a numeric space sufficiently large so as to
-    be infeasible to predictably generate the same hash value for two different
-    files. (Used as an integrity checking mechanism). Commonly used algorithms
-    are MD5, SHA1, SHA224, SHA256, RIPEMD-128. (See also
-    http://en.wikipedia.org/wiki/Cryptographic_hash_function).
+   Cryptographic Hash/Cryptographic Hashing Algorithm
+       A mathematical method of uniquely representing a stream of bits with a
+       fixed-length numeric value in a numeric space sufficiently large so as to
+       be infeasible to predictably generate the same hash value for two different
+       files. (Used as an integrity checking mechanism). Commonly used algorithms
+       are MD5, SHA1, SHA224, SHA256, RIPEMD-128. (See also
+       http://en.wikipedia.org/wiki/Cryptographic_hash_function).
 
-Einstein 1
-    A network flow based behavioral and watchlist based detection system
-    developed by University of Michigan and Merit Networks, Inc. for use by
-    US-CERT.
+   Einstein 1
+       A network flow based behavioral and watchlist based detection system
+       developed by University of Michigan and Merit Networks, Inc. for use by
+       US-CERT.
 
-Fusion Center
-    Entities created by DHS to integrate federal law enforcement and
-    intelligence resources with state and local law enforcement for greater
-    collaboration and information sharing across levels of SLTT governments.
+   Fusion Center
+       Entities created by DHS to integrate federal law enforcement and
+       intelligence resources with state and local law enforcement for greater
+       collaboration and information sharing across levels of SLTT governments.
 
-GZIP
-    Gnu ZIP (file compression program)
+   GZIP
+       Gnu ZIP (file compression program)
 
-MUTEX
-    Mutual Exclusion (object or lock, used to synchronize execution of
-    independent threads or processes that must share a common resource in an
-    exclusive manner, or to ensure only one copy of a program is running at a
-    time)
+   MUTEX
+       Mutual Exclusion (object or lock, used to synchronize execution of
+       independent threads or processes that must share a common resource in an
+       exclusive manner, or to ensure only one copy of a program is running at a
+       time)
 
-NetFlow
-    Record format developed by Cisco for logging and storing Network Flow
-    information (see also SiLKTools).
+   NetFlow
+       Record format developed by Cisco for logging and storing Network Flow
+       information (see also SiLKTools).
 
-NoSQL
-    The term for database that does not use the typical table-based relational
-    schema as Relational Database Management Systems (RDBMS) 
+   NoSQL
+       The term for database that does not use the typical table-based relational
+       schema as Relational Database Management Systems (RDBMS)
 
-Ops-Trust (ops-t)
-    Operational Security Trust organization (see http://ops-trust.net/)
+   Ops-Trust (ops-t)
+       Operational Security Trust organization (see http://ops-trust.net/)
 
-Redis
-    A "NoSQL" database system used to store files in a key/value pair model via
-    a RESTful HTTP/HTTPS interface.
+   Redis
+       A "NoSQL" database system used to store files in a key/value pair model via
+       a RESTful HTTP/HTTPS interface.
 
-SiLKTools
-    A network flow logging and archiving format and tool set developed by
-    Carnegie Mellon’s Software Engineering Institute (in support of CERT/CC).
+   SiLKTools
+       A network flow logging and archiving format and tool set developed by
+       Carnegie Mellon’s Software Engineering Institute (in support of CERT/CC).
 
-Team Cymru
-    (Pronounced "COME-ree") – "Team Cymru Research NFP is a specialized
-    Internet security research firm and 501(c)3 non-profit dedicated to making
-    the Internet more secure. Team Cymru helps organizations identify and
-    eradicate problems in their networks, providing insight that improves
-    lives."
+   Team Cymru
+       (Pronounced "COME-ree") – "Team Cymru Research NFP is a specialized
+       Internet security research firm and 501(c)3 non-profit dedicated to
+       making the Internet more secure. Team Cymru helps organizations identify
+       and eradicate problems in their networks, providing insight that
+       improves lives."
 
-Tupelo
-    A host-based forensic system (client and server) developed at the
-    University of Washington, based on the Honeynet Project “Manuka” system.
+   Tupelo
+       A host-based forensic system (client and server) developed at the
+       University of Washington, based on the Honeynet Project “Manuka” system.
 
 .. _acronyms:
 
@@ -100,153 +102,156 @@ List of Acronyms
 
 .. glossary::
 
-AAA
-    Authentication, Authorization, and Accounting
+   AAA
+       Authentication, Authorization, and Accounting
 
-AMQP
-    Advanced Message Queuing Protocol
+   AMQP
+       Advanced Message Queuing Protocol
 
-AS
-    Autonomous System
+   AS
+       Autonomous System
 
-ASN
-    Autonomous System Number
+   ASN
+       Autonomous System Number
 
-CI
-    Critical Infrastructure
+   CI
+       Critical Infrastructure
 
-CIDR
-    Classless Internet Domain Routing
+   CIDR
+       Classless Internet Domain Routing
 
-CIF
-    Collective Intelligence Framework
+   CIF
+       Collective Intelligence Framework
 
-CIP
-    Critical Infrastructure Protection
+   CIP
+       Critical Infrastructure Protection
 
-CISO
-    Chief Information and Security Officer
+   CISO
+       Chief Information and Security Officer
 
-COA
-    Course of Action (steps to Respond and Recover)
+   COA
+       Course of Action (steps to Respond and Recover)
 
-CONOPS
-    Concept of Operations
+   CONOPS
+       Concept of Operations
 
-CRADA
-    Cooperative Research and Development Agreement
+   CRADA
+       Cooperative Research and Development Agreement
 
-CSIRT
-    Computer Security Incident Response Team
+   CSIRT
+       Computer Security Incident Response Team
 
-CSV
-    Comma-separated Value (a semi-structured file format)
+   CSV
+       Comma-separated Value (a semi-structured file format)
 
-DIMS
-    Distributed Incident Management System
+   DIMS
+       Distributed Incident Management System
 
-DNS
-    Domain Name System
+   DNS
+       Domain Name System
 
-DoS
-    Denial of Service
+   DoS
+       Denial of Service
 
-DDoS
-    Distributed Denial of Service
+   DDoS
+       Distributed Denial of Service
 
-EO
-    Executive Order
+   EO
+       Executive Order
 
-HSPD
-    Homeland Security Presidential Directive
+   HSPD
+       Homeland Security Presidential Directive
 
-ICT
-    Information and Communication Technology
+   ICT
+       Information and Communication Technology
 
-IOC
-    Indicators of Compromise
+   IOC
+       Indicators of Compromise
 
-IP
-    Internet Protocol (TCP and UDP are examples of Internet Protocols)
+   IP
+       Internet Protocol (TCP and UDP are examples of Internet Protocols)
 
-IRC
-    Internet Relay Chat (an instant messaging system)
+   IRC
+       Internet Relay Chat (an instant messaging system)
 
-JSON
-    JavaScript Object Notation
+   JSON
+       JavaScript Object Notation
 
-MAPP
-    Microsoft Active Protections Program
+   MAPP
+       Microsoft Active Protections Program
 
-MNS
-    Mission Needs Statement
+   MNS
+       Mission Needs Statement
 
-NCFTA
-    National Cyber-Forensics & Training Alliance
+   NCFTA
+       National Cyber-Forensics & Training Alliance
 
-NTP
-    Network Time Protocol (a service exploited to perform reflected/amplified
-    DDoS attacks by spoofing the source address of requests, where the much
-    larger responses flood the victim)
+   NTP
+       Network Time Protocol (a service exploited to perform reflected/amplified
+       DDoS attacks by spoofing the source address of requests, where the much
+       larger responses flood the victim)
 
-OODA
-    Observe, Orient, Decide, and Act (also known as the “Boyd Cycle”)
+   OODA
+       Observe, Orient, Decide, and Act (also known as the “Boyd Cycle”)
 
-PPD
-    Presidential Policy Directive
+   PPD
+       Presidential Policy Directive
 
-PRISEM
-    Public Regional Information Security Event Management
+   PRISEM
+       Public Regional Information Security Event Management
 
-RBAC
-    Role Based Access Control
+   RBAC
+       Role Based Access Control
 
-RESTful
-    Representational State Transfer web service API
+   RESTful
+       Representational State Transfer web service API
 
-RPC
-    Remote Procedure Call
+   RPC
+       Remote Procedure Call
 
-SCADA
-    Supervisory Control and Data Acquisition
+   SCADA
+       Supervisory Control and Data Acquisition
 
-SIEM
-    Security Information Event Management (sometimes referred to as Security Event Information Management, Security Event Monitoring, causing some to pronounce it as "sim-sem".)
+   SIEM
+       Security Information Event Management (sometimes referred to as Security
+       Event Information Management, Security Event Monitoring, causing some to
+       pronounce it as "sim-sem".)
 
-SLTT
-    State, Local, Territorial, and Tribal (classification of non-federal government entities)
+   SLTT
+       State, Local, Territorial, and Tribal (classification of non-federal
+       government entities)
 
-SOC
-    Security Operations Center
+   SOC
+       Security Operations Center
 
-SoD
-    Security on Demand (PRISEM project support vendor)
+   SoD
+       Security on Demand (PRISEM project support vendor)
 
-SSH
-    Secure Shell
+   SSH
+       Secure Shell
 
-STIX
-    Structure Threat Information Expression. A standard for information exchange developed by MITRE in support of DHS US-CERT.
+   STIX
+       Structure Threat Information Expression. A standard for information
+       exchange developed by MITRE in support of DHS US-CERT.
 
-TAXII
-    Trusted Automated Exchange of Indicator Information
+   TAXII
+       Trusted Automated Exchange of Indicator Information
 
-TCP
-    Transmission Control Protocol (one of the Internet Protocols)
+   TCP
+       Transmission Control Protocol (one of the Internet Protocols)
 
-TLP
-    Traffic Light Protocol
+   TLP
+       Traffic Light Protocol
 
-TTP
-    Tools, Tactics, and Procedures
+   TTP
+       Tools, Tactics, and Procedures
 
-UC
-    Use Case
+   UC
+       Use Case
 
-UDP
-    Unreliable Datagram Protocol (one of the Internet Protocols)
+   UDP
+       Unreliable Datagram Protocol (one of the Internet Protocols)
 
-WCX
-    Western Cyber Exchange
-
+   WCX
+       Western Cyber Exchange
 
