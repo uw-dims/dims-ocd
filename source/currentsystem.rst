@@ -3,19 +3,8 @@
 Current system or situation
 ===========================
 
-.. note:: TBD
-
-    This section shall be divided into the following paragraphs to describe the
-    system or situation as it currently exists.
-
-
 Background, objectives, and scope
 ---------------------------------
-
-.. note:: TBD
-
-   This paragraph shall describe the background, mission or objectives, and
-   scope of the current system or situation.
 
 Homeland Security Presidential Directive 7 (`HSPD-7`_), released in 2003, set
 in motion a number of policy changes and created awareness of a new problem --
@@ -157,13 +146,6 @@ source technology and standards.
 Operational policies and constraints
 ------------------------------------
 
-.. note::  TBD
-
-   This paragraph shall describe any operational policies and constraints that
-   apply to the current system or situation.
-
-..
-
 Policies
 ~~~~~~~~
 
@@ -222,7 +204,7 @@ Constraints
 Description of current system or situation
 ------------------------------------------
 
-.. note::  TBD
+.. todo::
 
     This paragraph shall provide a description of the current system or
     situation, identifying differences associated with different states or
@@ -459,7 +441,11 @@ as many as five regional SLTT collaboration efforts that the PRISEM leadership
 has interacted with and who have expressed an interest in replicating what has
 been done within PRISEM (see Section :ref:`` 2.2 Users and Other Stakeholders).
 
-.. note:: FIX CROSS REFERENCES
+.. todo::
+
+   FIX CROSS REFERENCES
+
+..
 
 What is lacking from PRISEM at present?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -523,18 +509,19 @@ scope.
 Users or involved personnel
 ---------------------------
 
-.. note:: TBD
+.. todo::
 
    This paragraph shall describe the types of users of the system, or personnel
    involved in the current situation, including, as applicable, organizational
    structures, training/skills, responsibilities, activities, and interactions
    with one another.
 
+..
 
 Support concept
 ---------------
 
-.. note:: TBD
+.. todo::
 
    This paragraph shall provide an overview of the support concept for the
    current system, including, as applicable to this document, support
@@ -542,5 +529,6 @@ Support concept
    criteria; maintenance levels and cycles; and storage, distribution, and
    supply methods.
 
+..
 
 .. _HSPD-7: http://www.dhs.gov/homeland-security-presidential-directive-7

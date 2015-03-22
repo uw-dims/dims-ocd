@@ -3,20 +3,20 @@
 Justification for and nature of changes
 =======================================
 
-.. note:: TBD
+.. todo::
 
    This section shall be divided into the following paragraphs.
 
+..
 
 .. _changejustification:
 
 Justification for change
 ------------------------
 
-.. note:: TBD
+.. todo::
 
    This paragraph shall:
-
 
    + Describe new or modified aspects of user needs, threats, missions,
      objectives, environments, interfaces, personnel or other factors that
@@ -25,6 +25,7 @@ Justification for change
    + Summarize deficiencies or limitations in the current system or situation
      that make it unable to respond to these factors
 
+..
 
 PRISEM is the first regional government collaboration to enter into a
 Cooperative Research and Development Agreement (CRADA) with US-CERT to receive
@@ -34,7 +35,11 @@ goal is to eventually link the IOCs with Tools/Tactics/Procedures (TTPs) and
 Courses of Action (CoA) to provide actionable intelligence to PRISEM members
 (see Figure 2).
 
-.. note:: FIX FIGURE CROSS REFERENCE
+.. todo::
+
+   FIX FIGURE CROSS REFERENCE
+
+..
 
 In 2008 DHS released a document called the National Response Framework (FEMA,
 2008). The relationship building between hometown security and Homeland
@@ -88,7 +93,7 @@ source technology and standards.
 Description of needed changes
 -----------------------------
 
-.. note:: TBD
+.. todo::
 
    This paragraph shall summarize new or modified capabilities/functions,
    processes, interfaces, or other changes needed to respond to the factors
@@ -105,7 +110,11 @@ These use cases (shown in Figure 1, taken from the STIX web site) are:
 (UC2); *Managing Cyber Threat Response Activities* (UC3); and *Sharing Cyber
 Threat Information* (UC4). (MITRE)
 
-.. note:: STIX USE CASES FIGURE
+.. todo::
+
+   STIX USE CASES FIGURE
+
+..
 
 MITRE defines *observable* as, "[an] event or stateful property that is observed
 or may be observed in the operational cyber domain, such as a registry key
@@ -175,7 +184,11 @@ process.
 
 
 
-.. note:: FIGURE Relationship of STIX Elements (Source: Bret Jordan, Blue Coat Systems)
+.. todo::
+
+   FIGURE Relationship of STIX Elements (Source: Bret Jordan, Blue Coat Systems)
+
+..
 
 The objective of the DIMS system is to support the following high-level
 missions and needs, which incorporate the four use cases described above as
@@ -228,25 +241,28 @@ defined by MITRE:
 Priorities among the changes
 ----------------------------
 
-.. note:: TBD
+.. todo:;
 
    This paragraph shall identify priorities among the needed changes. It shall,
    for example, identify each change as essential, desirable, or optional, and
    prioritize the desirable and optional changes.
 
+..
 
 Changes considered but not included
 -----------------------------------
 
-.. note:: TBD
+.. todo::
 
    This paragraph shall identify changes considered but not included in
    :ref:`changedescription`, and rationale for not including them.
 
+..
+
 Assumptions and constraints
 ---------------------------
 
-.. note:: TBD
+.. todo::
 
    This paragraph shall identify any assumptions and constraints applicable to
    the changes identified in this section.

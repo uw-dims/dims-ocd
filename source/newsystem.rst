@@ -3,31 +3,37 @@
 Concept for a new or modified system
 ====================================
 
-.. note:: TBD
+.. todo::
 
    This section shall be divided into the following paragraphs to describe a
    new or modified system.
 
+..
+
 Background, objectives, and scope
 ---------------------------------
 
-.. note:: TBD
+.. todo::
 
    This paragraph shall describe the background, mission or objectives, and
    scope of the new or modified system.
 
+..
+
 Operational policies and constraints
 ------------------------------------
 
-.. note:: TBD
+.. todo::
 
    This paragraph shall describe any operational policies and constraints that
    apply to the new or modified system.
 
+..
+
 Description of the new or modified system
 -----------------------------------------
 
-.. note:: TBD
+.. todo::
 
    This paragraph shall provide a description of the new or modified system,
    identifying differences associated with different states or modes of
@@ -59,23 +65,27 @@ Description of the new or modified system
    + Provisions for safety, security, privacy, and continuity of operations in
      emergencies
 
+..
+
 .. _users:
 
 Users/affected personnel
 ------------------------
 
-.. note:: TBD
+.. todo::
 
    This paragraph shall describe the types of users of the new or modified
    system, including, as applicable, organizational structures,
    training/skills, responsibilities, and interactions with one another.
+
+..
 
 .. _support:
 
 Support concept
 ---------------
 
-.. note:: TBD
+.. todo::
 
    This paragraph shall provide an overview of the support concept for the new
    or modified system, including, as applicable, support agency(ies);
@@ -83,4 +93,4 @@ Support concept
    maintenance levels and cycles; and storage, distribution, and supply
    methods.
 
-
+..

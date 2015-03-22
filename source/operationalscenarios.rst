@@ -3,7 +3,7 @@
 Operational scenarios
 =====================
 
-.. note:: TBD
+.. todo::
 
    This section shall describe one or more operational scenarios that
    illustrate the role of the new or modified system, its interaction with
@@ -12,4 +12,4 @@ Operational scenarios
    information, interactions, etc., as applicable.  Reference may be made to
    other media, such as videos, to provide part or all of this information.
 
-
+..
