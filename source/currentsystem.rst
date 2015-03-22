@@ -181,15 +181,17 @@ Assumptions
 Constraints
 ~~~~~~~~~~~
 
-+ The DIMS team is operating under an NDA with the City of Seattle for access
-  to their data in the PRISEM system for development purposes. Anonymization
-  features described in this document are intended to facilitate sharing within
-  these policy constraints.
++ Data currently held in the PRISEM system cannot be shared with non-PRISEM
+  members without the express permission of those whose data is held in the
+  system. The DIMS team is operating under an NDA with the City of Seattle for
+  access to `the City's data` in the PRISEM system for development purposes.
+  Anonymization features described in this document are intended to facilitate
+  sharing within these policy constraints.
 
 + The DIMS team is operating under an NDA with the Ops-Trust organization for
-  access to the source code for their portal. Ops-Trust will decide when and
-  how to release the source code to the general public, pending modifications
-  and application penetration testing to be performed by the DIMS team.
+  access to the source code for their portal. Ops-Trust has released the source
+  for the portal on GitHub (https://github.com/ops-trust/portal.git). Other
+  information not made public yet cannot be released without their permission.
 
 + The DIMS team is operating under export control restrictions that apply to
   any/all encryption software used in the system. Based on consultation with UW
@@ -238,10 +240,12 @@ Description of current system or situation
 
 ..
 
-More specifically, there are gaps in functionality in the existing sub-systems
-that DIMS will address. The three primary sub-systems are: (1) the Ops-Trust
+There are gaps in functionality in the existing sub-systems that DIMS is
+intended to address. The three primary sub-systems are: (1) the Ops-Trust
 portal; (2) The Collective Intelligence Framework (CIF) database; and (3) the
 PRISEM system. Each of these will be examined in turn.
+
+.. _opstrustportalnow:
 
 Ops-Trust portal Code Base
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -258,13 +262,14 @@ Ops-Trust portal Code Base
     + PGP (or GPG) encryption key
     + Instant messaging system username
 
-What does the Ops-Trust portal do now?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. What can the ops-trust portal do now?
 
 The Ops-Trust portal currently does a good job of the nomination and vouching
 workflow that allows user accounts to be set up and attributes populated. It
 then does a good job of segregating trust groups from each other, including
 facilitating encrypted email communications and storing data in a wiki.
+
+.. What is lacking from the ops-trust portal at present?
 
 There are several weaknesses or limitations to the way the Ops-Trust portal
 works and is used. All IOC data is passed around at present is in arbitrary
@@ -284,62 +289,9 @@ the reader is responsible for protecting, and widespread and rapidly
 progressing events can generate dozens or even hundreds of messages in a day,
 which is difficult to keep up with.
 
-What is lacking from the Ops-Trust portal?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _cif:
 
-The principle mechanism lacking from the Ops-Trust portal is the ability to
-pre-process IOC data sent by users so as to notify each user when a thread
-pertains to them (because IOCs match pre-defined lists that the user cares
-about), and more specifically, which email messages contain IOCs of interest.
-The data necessary to do such filtering and altering is not stored in the
-Ops-Trust portal database, nor is there a standardized mechanism for passing
-machine-parseable data into the portal to facilitate workflow automation. The
-Ops-Trust portal is also monolithic and focused on managing the trust groups
-and users, not on making data analytics and visualization capabilities
-available to help process the IOC data that is available throughout the user
-base. It does not have capabilities to anonymize data, nor to associated TLP
-tags with data such that filtering and anonymization does not rely solely on
-humans knowing when/how to filter and anonymize data, and on them never making
-mistakes.
-
-How does it need to change?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-The Ops-Trust portal, written in Perl with a PostgreSQL database backend, needs
-to be refactored, using a model-view-controller framework (MVC) framework such
-as Catalyst (http://www.catalystframework.org/), to separate the front end UI
-capabilities from the back-end database and portal workflow processes so as to
-provide an API that alternate UI components can access via a standardized
-mechanism such as a RESTful HTTPS interface. The UI needs to be refactored to
-improve usability and provide access to both user and administrator functions.
-It needs to have additional user attributes added to facilitate the filtering
-and notification process described above, as well as to have workflow
-processing features added to perform some of the manual filtering and searching
-capabilities. The account management features need to be extended to support
-AAA and RBAC features that use mechanisms such as roles and TLP tagging to
-ensure exported data is filtered and/or anonymized in accordance with
-user-defined policies. Once the MVC conversion has been completed, and some of
-the additional attributes and features necessary to semi-automate information
-sharing, an application penetration test needs to be performed to satisfy
-requirements of the authors for publicly releasing the code as an open source
-project.
-
-Why is this relevant?
-^^^^^^^^^^^^^^^^^^^^^
-
-Adding features to enable trusted sharing of machine-parseable IOCs between
-instances of the Ops-Trust portal makes it possible to scale trusted
-information sharing to a larger population than the existing Ops-Trust group is
-capable of growing. Having additional attributes for users enables workflow
-automation of notification of IOCs relevant to their constituencies, which
-speeds response. Eventually, features that ensure the chain-of-custody and
-provenance of security data that can be used as evidence in criminal or civil
-legal proceedings, combined with the machine-parseable nature of the data
-exchange, will facilitate reporting computer crimes to law enforcement in a
-manner that speeds their investigations and helps more accurately scope and
-prioritize investigations.
-
-COLLECTIVE INTELLIGENCE FRAMEWORK (CIF) DATABASE
+Collective Intelligence Framework (CIF) Database
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 + "Indicators of Compromise"
@@ -348,8 +300,7 @@ COLLECTIVE INTELLIGENCE FRAMEWORK (CIF) DATABASE
 + Builds context about attacker activity over time
 + Produces feeds of indicators for watchlists, searching hard drives, rules for security devices, etc.
 
-What can CIF do now?
-^^^^^^^^^^^^^^^^^^^^
+.. What can CIF do now?
 
 CIF provides a database of historic IOCs obtained from feeds that it consumes
 on a regular basis. In turn, CIF produces feeds of IOCs that can be used for
@@ -367,8 +318,7 @@ for, but produce no results, into a watchlist. A more accurate way to do this
 is to have users explicitly put suspicious IP addresses or CIDR blocks into CIF
 with special tagging that is then used to generate a watchlist.
 
-What is lacking from CIF at present?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. What is lacking from CIF at present?
 
 While not a lack of features in CIF, per se, the way CIF is being used is
 lacking in potential. While the PRISEM uses CIF to generate watchlists for
@@ -385,40 +335,7 @@ indicators of compromise (or confirmation of IOCs sent to the system or entered
 manually by analysts.) Were these events to be stored, they would be correlated
 with other IOCs and could be published as a feed to interested outside parties.
 
-How does it need to change?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-It is unknown how much data can be put into CIF before it reaches performance
-or storage limits. As part of the PRISEM deployment of CIF, mechanisms were put
-in place to regularly log the sizes of certain database tables and the database
-itself, and to log the amount of time it takes to pull feeds from outside
-sources, to perform correlation, and to index database tables (all processes
-that run from :term:`cron` on a scheduled basis). This information has only been used
-to answer questions at given points in time, but the intention was to perform
-linear regression on this data on a regular basis to estimate when resource
-limitations will be hit (e.g., when the disk drive is expected to be filled to
-100%, or when the CPU processing capacity approaches 100% on a continual
-basis.) This would allow better monitoring of resources, tuning of system
-parameters, and estimation of hardware capacity required as the PRISEM
-population increases. All of these features would be made available to the CIF
-developers to extend the capability of all CIF users to be pro-active about
-their deployment infrastructure.
-
-Why is this relevant?
-^^^^^^^^^^^^^^^^^^^^^
-
-As CIF is a "work in progress" and constantly undergoing development, the
-community of users is often called upon to help identify bug fixes and feature
-additions that can be made available to the CIF development team via :term:`Git` "pull"
-requests. This helps improve the generally available release of CIF and
-minimizes the need to maintain add-on patches independent of CIF releases.
-Since the intention of DIMS is to be replicated in many regions, each of which
-constitutes a different mix of participants, security data sources feeding the
-central SIEM, etc., mechanisms to better identify capacity requirements and
-monitor runtime resource usage for minimum downtown becomes critical. The same
-machine learning algorithms used for resource monitoring are also useful for
-clustering and classification of security event data, so their implementation
-in a generalized framework increases the flexibility of their application.
+.. _prisemnow:
 
 The PRISEM System
 ~~~~~~~~~~~~~~~~~
@@ -429,8 +346,7 @@ The PRISEM System
 + Requires intensive administration and coding when provisioning new tenants
 + Proprietary vendor portal the principal user interface
 
-What can PRISEM do now?
-^^^^^^^^^^^^^^^^^^^^^^^
+.. What can PRISEM do now?
 
 The PRISEM system has demonstrated that sharing event logs within a trust
 community improves the situational awareness across regional SLTT government
@@ -447,8 +363,7 @@ been done within PRISEM (see Section :ref:`` 2.2 Users and Other Stakeholders).
 
 ..
 
-What is lacking from PRISEM at present?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. What is lacking from PRISEM at present?
 
 There are limitations in what PRISEM is capable of doing, primarily based on
 the commercial off the shelf SIEM system at its core, and the reliance on a
@@ -461,49 +376,6 @@ capabilities. The portal only supports what the vendor has programmed it to
 support. There is no easy way to integrate newly developed features,
 visualization tools, or analytic algorithms that operate on the PRISEM
 datasets.
-
-How does it need to change?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-The underlying inter-process communication added to the PRISEM system in recent
-months provides a flexible and extensible mechanisms for Remote Procedure Call
-(RPC) invocation, as well as logging of information about queries and response
-times that can serve to estimate wait times for longer queries. This message
-bus architecture is also programming language agnostic, operating system
-agnostic, and is using a structured command structure that allows
-self-description of the data being sent between programs to facilitate merging
-results from multiple processes (e.g., the “identify friend or foe” capability,
-anonymization and statistics, partitioning and filtering based on participant
-network allocation attributes, etc.) A new user interface that supports all of
-these capabilities in a flexible framework architecture will allow seamless
-integration between any SIEM product, any vendor portal, and any open source
-security tools that are appropriate for processing the kind of data held within
-PRISEM.
-
-Why is this relevant?
-^^^^^^^^^^^^^^^^^^^^^
-
-Adding a layer of abstraction above the SIEM and vendor portal allows
-flexibility for any SIEM, or any managed security service vendor, to be
-employed to build a PRISEM-like regional collaborative group. There are many
-competitors in this field, and none of them combines the features of universal
-compatibility, affordability across the full range of small to large SLTT
-collaborative groups, and ease of migration or interoperability as regional
-collaborative groups spontaneously form and grow. What do you do if two groups
-using two different SIEM products and two different vendor portals wish to
-merge? What do you do if the SIEM you are using reaches its end-of-life and is
-now longer supported, necessitating a migration of over a year’s worth of
-normalized log data to be translated to a new product? What do you do if a
-group decides they want to replicate the PRISEM model, and now has to scope out
-a SIEM deployment and/or managed security service vendor contract for
-provisioning and support? These are all realistic questions, very hard to
-answer in the short term, very costly to enter in to, and take a significant
-effort to reach a go/no-go decision point. An abstraction layer that focuses on
-standardized data interchange, vendor-agnostic interfaces to data, and an open
-framework for new features, solves many of these problems and provides the
-affordability, flexibility, and scalability that is needed to reach national
-scope.
-
 
 
 Users or involved personnel
@@ -518,6 +390,11 @@ Users or involved personnel
 
 ..
 
++ Select participants in the existing PRISEM system.
+
++ The current PRISEM principal analyst who interacts with the Seattle
+  Fusion Center.
+
 Support concept
 ---------------
 
@@ -530,5 +407,34 @@ Support concept
    supply methods.
 
 ..
+
+.. How is PRISEM supported now?
+
+The current PRISEM system is supported through grant funding, contracting with
+a commercial managed security service vendor who has working experience with
+the underlying commercial SIEM system originally chosen for use by PRISEM.
+This system is known as `Log Matrix` and is an end-of-life product now owned
+by Intel.
+
+.. todo::
+
+   What is lacking from PRISEM at present?
+
+..
+
+.. todo::
+
+   How does it need to change?
+
+..
+
+
+.. todo::
+
+   Why is this relevant?
+
+..
+
+
 
 .. _HSPD-7: http://www.dhs.gov/homeland-security-presidential-directive-7
