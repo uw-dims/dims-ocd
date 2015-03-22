@@ -420,8 +420,8 @@ machine learning algorithms used for resource monitoring are also useful for
 clustering and classification of security event data, so their implementation
 in a generalized framework increases the flexibility of their application.
 
-THE PRISEM SYSTEM
------------------
+The PRISEM System
+~~~~~~~~~~~~~~~~~
 
 + Event collection, correlation, archiving
 + Distillation of hundreds of alerts per day from (low) tens of millions of events per day
