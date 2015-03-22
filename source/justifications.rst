@@ -3,29 +3,10 @@
 Justification for and nature of changes
 =======================================
 
-.. todo::
-
-   This section shall be divided into the following paragraphs.
-
-..
-
 .. _changejustification:
 
 Justification for change
 ------------------------
-
-.. todo::
-
-   This paragraph shall:
-
-   + Describe new or modified aspects of user needs, threats, missions,
-     objectives, environments, interfaces, personnel or other factors that
-     require a new or modified system
-
-   + Summarize deficiencies or limitations in the current system or situation
-     that make it unable to respond to these factors
-
-..
 
 PRISEM is the first regional government collaboration to enter into a
 Cooperative Research and Development Agreement (CRADA) with US-CERT to receive
@@ -33,13 +14,19 @@ de-classified IOCs. The intent is to receive and send these indicators using
 MITRE Corporation’s Structured Threat Information eXpression (STIX) format. The
 goal is to eventually link the IOCs with Tools/Tactics/Procedures (TTPs) and
 Courses of Action (CoA) to provide actionable intelligence to PRISEM members
-(see Figure 2).
+(see Figure :ref:`stixelements`).
 
-.. todo::
+.. _stixelements:
 
-   FIX FIGURE CROSS REFERENCE
+.. figure:: images/STIX_Diagram_Horizontal_1.1.png
+   :alt: STIX IOCs
+   :width: 95%
+   :align: center
+
+   Relationship between STIX  Elements (Source: Bret Jordan, Blue Coat Systems)
 
 ..
+
 
 In 2008 DHS released a document called the National Response Framework (FEMA,
 2008). The relationship building between hometown security and Homeland
@@ -105,16 +92,22 @@ As mentioned in the previous section, MITRE has been working with US-CERT to
 develop standards that enable the kind of response and recovery process called
 for by EO 13636 and PPD 21. To that end, they have illustrated how STIX can be
 applied to four specific use cases that bridge local to national response.
-These use cases (shown in Figure 1, taken from the STIX web site) are:
+These use cases (shown in Figure :ref:`stixusecases`, taken from the STIX web site) are:
 *Analyzing Cyber Threats* (UC1); *Specifying Indicator Patterns for Cyber Threats*
 (UC2); *Managing Cyber Threat Response Activities* (UC3); and *Sharing Cyber
 Threat Information* (UC4). (MITRE)
 
-.. todo::
+.. _stixusecases:
 
-   STIX USE CASES FIGURE
+.. figure:: images/STIX_use_cases.png
+   :alt: STIX use cases
+   :width: 95%
+   :align: center
+
+   STIX uses cases (from MITRE)
 
 ..
+
 
 MITRE defines *observable* as, "[an] event or stateful property that is observed
 or may be observed in the operational cyber domain, such as a registry key
@@ -236,12 +229,154 @@ defined by MITRE:
    transition these tools into commercially available products that advance the
    state of the art in distributed incident response.
 
+.. _opstrustportalnow:
+
+Ops-Trust portal Code Base
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The principle mechanism lacking from the Ops-Trust portal is the ability to
+pre-process IOC data sent by users so as to notify each user when a thread
+pertains to them (because IOCs match pre-defined lists that the user cares
+about), and more specifically, which email messages contain IOCs of interest.
+The data necessary to do such filtering and altering is not stored in the
+Ops-Trust portal database, nor is there a standardized mechanism for passing
+machine-parseable data into the portal to facilitate workflow automation. The
+Ops-Trust portal is also monolithic and focused on managing the trust groups
+and users, not on making data analytics and visualization capabilities
+available to help process the IOC data that is available throughout the user
+base. It does not have capabilities to anonymize data, nor to associated TLP
+tags with data such that filtering and anonymization does not rely solely on
+humans knowing when/how to filter and anonymize data, and on them never making
+mistakes.
+
+.. How does it need to change?
+
+The Ops-Trust portal, written in Perl with a PostgreSQL database backend, needs
+to be refactored, using a model-view-controller framework (MVC) framework such
+as Catalyst (http://www.catalystframework.org/), to separate the front end UI
+capabilities from the back-end database and portal workflow processes so as to
+provide an API that alternate UI components can access via a standardized
+mechanism such as a RESTful HTTPS interface. The UI needs to be refactored to
+improve usability and provide access to both user and administrator functions.
+It needs to have additional user attributes added to facilitate the filtering
+and notification process described above, as well as to have workflow
+processing features added to perform some of the manual filtering and searching
+capabilities. The account management features need to be extended to support
+AAA and RBAC features that use mechanisms such as roles and TLP tagging to
+ensure exported data is filtered and/or anonymized in accordance with
+user-defined policies. Once the MVC conversion has been completed, and some of
+the additional attributes and features necessary to semi-automate information
+sharing, an application penetration test needs to be performed to satisfy
+requirements of the authors for publicly releasing the code as an open source
+project.
+
+.. Why is this relevant?
+
+Adding features to enable trusted sharing of machine-parseable IOCs between
+instances of the Ops-Trust portal makes it possible to scale trusted
+information sharing to a larger population than the existing Ops-Trust group is
+capable of growing. Having additional attributes for users enables workflow
+automation of notification of IOCs relevant to their constituencies, which
+speeds response. Eventually, features that ensure the chain-of-custody and
+provenance of security data that can be used as evidence in criminal or civil
+legal proceedings, combined with the machine-parseable nature of the data
+exchange, will facilitate reporting computer crimes to law enforcement in a
+manner that speeds their investigations and helps more accurately scope and
+prioritize investigations.
+
+
+.. _cifchanges:
+
+Collective Intelligence Framework (CIF) Database
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+..  How does it need to change?
+
+It is unknown how much data can be put into CIF before it reaches performance
+or storage limits. As part of the PRISEM deployment of CIF, mechanisms were put
+in place to regularly log the sizes of certain database tables and the database
+itself, and to log the amount of time it takes to pull feeds from outside
+sources, to perform correlation, and to index database tables (all processes
+that run from :term:`cron` on a scheduled basis). This information has only been used
+to answer questions at given points in time, but the intention was to perform
+linear regression on this data on a regular basis to estimate when resource
+limitations will be hit (e.g., when the disk drive is expected to be filled to
+100%, or when the CPU processing capacity approaches 100% on a continual
+basis.) This would allow better monitoring of resources, tuning of system
+parameters, and estimation of hardware capacity required as the PRISEM
+population increases. All of these features would be made available to the CIF
+developers to extend the capability of all CIF users to be pro-active about
+their deployment infrastructure.
+
+Why is this relevant?
+^^^^^^^^^^^^^^^^^^^^^
+
+As CIF is a "work in progress" and constantly undergoing development, the
+community of users is often called upon to help identify bug fixes and feature
+additions that can be made available to the CIF development team via :term:`Git` "pull"
+requests. This helps improve the generally available release of CIF and
+minimizes the need to maintain add-on patches independent of CIF releases.
+Since the intention of DIMS is to be replicated in many regions, each of which
+constitutes a different mix of participants, security data sources feeding the
+central SIEM, etc., mechanisms to better identify capacity requirements and
+monitor runtime resource usage for minimum downtown becomes critical. The same
+machine learning algorithms used for resource monitoring are also useful for
+clustering and classification of security event data, so their implementation
+in a generalized framework increases the flexibility of their application.
+
+.. _prisemchanges:
+
+The PRISEM System
+~~~~~~~~~~~~~~~~~
+
+.. How does it need to change?
+
+The underlying inter-process communication added to the PRISEM system in recent
+months provides a flexible and extensible mechanisms for Remote Procedure Call
+(RPC) invocation, as well as logging of information about queries and response
+times that can serve to estimate wait times for longer queries. This message
+bus architecture is also programming language agnostic, operating system
+agnostic, and is using a structured command structure that allows
+self-description of the data being sent between programs to facilitate merging
+results from multiple processes (e.g., the “identify friend or foe” capability,
+anonymization and statistics, partitioning and filtering based on participant
+network allocation attributes, etc.) A new user interface that supports all of
+these capabilities in a flexible framework architecture will allow seamless
+integration between any SIEM product, any vendor portal, and any open source
+security tools that are appropriate for processing the kind of data held within
+PRISEM.
+
+.. Why is this relevant?
+
+Adding a layer of abstraction above the SIEM and vendor portal allows
+flexibility for any SIEM, or any managed security service vendor, to be
+employed to build a PRISEM-like regional collaborative group. There are many
+competitors in this field, and none of them combines the features of universal
+compatibility, affordability across the full range of small to large SLTT
+collaborative groups, and ease of migration or interoperability as regional
+collaborative groups spontaneously form and grow. What do you do if two groups
+using two different SIEM products and two different vendor portals wish to
+merge? What do you do if the SIEM you are using reaches its end-of-life and is
+now longer supported, necessitating a migration of over a year’s worth of
+normalized log data to be translated to a new product? What do you do if a
+group decides they want to replicate the PRISEM model, and now has to scope out
+a SIEM deployment and/or managed security service vendor contract for
+provisioning and support? These are all realistic questions, very hard to
+answer in the short term, very costly to enter in to, and take a significant
+effort to reach a go/no-go decision point. An abstraction layer that focuses on
+standardized data interchange, vendor-agnostic interfaces to data, and an open
+framework for new features, solves many of these problems and provides the
+affordability, flexibility, and scalability that is needed to reach national
+scope.
+
+
+
 .. _changepriorities:
 
 Priorities among the changes
 ----------------------------
 
-.. todo:;
+.. todo::
 
    This paragraph shall identify priorities among the needed changes. It shall,
    for example, identify each change as essential, desirable, or optional, and
