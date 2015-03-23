@@ -16,17 +16,16 @@ goal is to eventually link the IOCs with Tools/Tactics/Procedures (TTPs) and
 Courses of Action (CoA) to provide actionable intelligence to PRISEM members
 (see Figure :ref:`stixelements`).
 
-.. _stixelements:
+.. _ioccoalinks:
 
-.. figure:: images/STIX_Diagram_Horizontal_1.1.png
-   :alt: STIX IOCs
+.. figure:: images/STIX_Diagram_1.1-DIMS-w-bg.png
+   :alt: Minimal linkage from Observables to COA
    :width: 95%
    :align: center
 
-   Relationship between STIX  Elements (Source: Bret Jordan, Blue Coat Systems)
+   Linking minimal subset of STIX elements from Observables to COA
 
 ..
-
 
 In 2008 DHS released a document called the National Response Framework (FEMA,
 2008). The relationship building between hometown security and Homeland
@@ -92,10 +91,10 @@ As mentioned in the previous section, MITRE has been working with US-CERT to
 develop standards that enable the kind of response and recovery process called
 for by EO 13636 and PPD 21. To that end, they have illustrated how STIX can be
 applied to four specific use cases that bridge local to national response.
-These use cases (shown in Figure :ref:`stixusecases`, taken from the STIX web site) are:
-*Analyzing Cyber Threats* (UC1); *Specifying Indicator Patterns for Cyber Threats*
-(UC2); *Managing Cyber Threat Response Activities* (UC3); and *Sharing Cyber
-Threat Information* (UC4). (MITRE)
+These use cases (shown in Figure :ref:`stixusecases`, taken from the STIX web
+site) are: *Analyzing Cyber Threats* (UC1); *Specifying Indicator Patterns for
+Cyber Threats* (UC2); *Managing Cyber Threat Response Activities* (UC3); and
+*Sharing Cyber Threat Information* (UC4). (MITRE)
 
 .. _stixusecases:
 
@@ -175,11 +174,14 @@ to the known good or known bad sets.) Keeping track of the growing body of
 known good and known bad is a requirement of the workflow for this discovery
 process.
 
+.. _stixelements:
 
+.. figure:: images/STIX_Diagram_Horizontal_1.1.png
+   :alt: STIX IOCs
+   :width: 95%
+   :align: center
 
-.. todo::
-
-   FIGURE Relationship of STIX Elements (Source: Bret Jordan, Blue Coat Systems)
+   Relationship between STIX  Elements (Source: Bret Jordan, Blue Coat Systems)
 
 ..
 
@@ -308,8 +310,7 @@ population increases. All of these features would be made available to the CIF
 developers to extend the capability of all CIF users to be pro-active about
 their deployment infrastructure.
 
-Why is this relevant?
-^^^^^^^^^^^^^^^^^^^^^
+.. Why is this relevant?
 
 As CIF is a "work in progress" and constantly undergoing development, the
 community of users is often called upon to help identify bug fixes and feature
@@ -370,6 +371,76 @@ affordability, flexibility, and scalability that is needed to reach national
 scope.
 
 
+Summary of the capabilities gap
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The principal high-level gaps that exist in supporting the missions described
+in the previous section have to do with the availability and affordability of
+tools that support those missions. Each of these tools have limitations or
+impediments to their use:
+
++ There are managed security services that could be engaged to handle all
+  security incident response and forensics. The cost of these services is
+  prohibitive for all but the most serious incidents with potential losses that
+  rise to the level of existential threats to the viability of the enterprise.
+  The availability of affordable open source tools to improve response and
+  recovery is a gap that DIMS is intended to fill.
+
++ There are agent-based systems and network-based that can provide the level of
+  detail and pervasive collection of event data at the host, server, and
+  network levels. These, too, are prohibitively expensive. They only work in
+  environments where policy can dictate the deployment of agents on all end
+  hosts and servers, and where network topology and administrative
+  responsibility at the enterprise level is such that one group can deploy,
+  manage, and interact on a daily basis with the security system. Most SLTT
+  government sites cannot afford to have this level of in-house security
+  monitoring and response capacity. At present, even if one site in a region
+  can afford such capabilities, their use is limited to protection of that site
+  alone and there is little benefit to other inter-related entities in the
+  region (hence the need to share not only IOCs and Observables, but also
+  Course of Action and analytic results.)
+
++ Most SIEM systems focus on the problem of collecting and correlating millions
+  of events per day, distilling them down to a reasonable (N<=100/day) level,
+  and directing them to the entities with administrative control over the
+  system identified in the alerts. Correlation across a confederated population
+  is not typically done (most deployments are for one enterprise, perhaps with
+  multiple business units under the same top level corporate structure). These
+  systems are also primarily focused on detection and alerting on input of
+  events, not on after-the-fact triage and respond/recover operations. When
+  they do support forensic analysis of past events, these systems typically do
+  not support confederated cross-organizational correlation and collaborative
+  response (e.g., by sharing analysis between multiple enterprises, or
+  distributing Course of Action information.)
+
++ The existence of the Ops-Trust community proves that volunteers can
+  self-assemble to respond and react to issues that impact everyone on the
+  internet, but these groups frequently operate on email and chat communication
+  channels that are unstructured, ad-hoc, and are very difficult to keep up
+  with. Unless one reads every message in every email thread, extracts all
+  attached files or processes all in-line data, and manually searches for IOCs
+  and Observables that can be manually used to search data sources that that
+  person controls, the benefit of information sharing is lost. And for any
+  emergent situation of global significance, the threads are many and the
+  messages in each thread can flow for days or weeks. It is impossible to keep
+  up with this without moving to structured data and machine processing to
+  identify messages of interest. 
+
++ There have been many formats for structured security data sharing developed
+  over the years. Each one has seen a similar lifecycle, where there is
+  interest and excitement at the start of the project, a slow deliberative
+  process of developing the standard, going through the process of vetting and
+  acceptance of the standard by an official body, and then a push to get the
+  industry and researchers to adopt the standard. STIX may encounter this same
+  fate. It is too early to tell. What some (like Wes Young, developer of the
+  Collective Intelligence Framework) suggest as an alternative is to "blow up
+  the standards process" and simply implement something quickly, get it used
+  by as many people as possible, adapt and modify it to address limitations
+  that are encountered, and keep moving forward. “We believe traditional
+  standards processes not only have a high barrier to entry, but are often slow
+  and use the design by committee approach. We believe the best way to create a
+  protocol is from the ground up using CONOPs. Push design out to the edge and
+  let operations influence design in real-time.
 
 .. _changepriorities:
 
