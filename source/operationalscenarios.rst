@@ -64,7 +64,7 @@ suspected botnet related event helps illustrate the process:
 
    .. _emailwithindicator:
 
-   .. figure:: images/email_with_indicator.png
+   .. figure:: images/email-with-indicator.png
       :alt: Email with indicator of SSH scanning activity
       :width: 80%
       :align: center
@@ -80,7 +80,7 @@ suspected botnet related event helps illustrate the process:
 
    .. _cifoutput:
 
-   .. figure:: images/CIF_SSH_scanner_lookup.png
+   .. figure:: images/CIF-SSH-scanner-lookup.png
       :alt: CIF lookup results
       :width: 90%
       :align: center
@@ -97,7 +97,7 @@ suspected botnet related event helps illustrate the process:
 
    .. _rwfindoutput:
 
-   .. figure:: images/identified_flows.png
+   .. figure:: images/identified-flows.png
       :alt: Confirmation of network flows
       :width: 90%
       :align: center
@@ -120,7 +120,7 @@ suspected botnet related event helps illustrate the process:
 
    .. _ciffulloutput:
 
-   .. figure:: images/CIF_browser_full_query.png
+   .. figure:: images/CIF-browser-full-query.png
       :alt: Output of full CIF query via browser plugin
       :width: 90%
       :align: center
@@ -139,7 +139,7 @@ suspected botnet related event helps illustrate the process:
 
    .. _prisemportal:
 
-   .. figure:: images/PRISEM_portal.png
+   .. figure:: images/PRISEM-portal.png
       :alt: PRISEM portal log query
       :width: 90%
       :align: center
@@ -153,7 +153,7 @@ suspected botnet related event helps illustrate the process:
 
    .. _portaloutput:
 
-   .. figure:: images/PRISEM_portal_output.png
+   .. figure:: images/PRISEM-portal-output.png
       :alt: PRISEM portal CSV output
       :width: 75%
       :align: center
@@ -253,9 +253,9 @@ holds IP addresses and CIDR blocks extracted from a CIF database for use as a
 
 ..
 
-.. _portaloutput:
+.. _stixwatchlist:
 
-.. figure:: images/STIX_watchlist.png
+.. figure:: images/STIX-watchlist.png
    :alt: Example watchlist in STIX format
    :width: 90%
    :align: center
@@ -321,7 +321,7 @@ Network Forensic Analysis
 
 .. _indicatorlifecycle:
 
-.. figure:: images/indicator_lifecycle.png
+.. figure:: images/indicator-lifecycle.png
    :alt: Indicator Lifecycle
    :width: 50%
    :align: right
@@ -550,7 +550,7 @@ intelligence gathering process.)
 
 .. _fullapt1graph:
 
-.. figure:: images/apt1-201302210010_18463-anon-sfdp.png
+.. figure:: images/apt1-201302210010-18463-anon-sfdp.png
    :alt: Graph of all APT1 Related Connections (180 Day Window)
    :width: 95%
    :align: center
@@ -580,7 +580,7 @@ this section, only the City of Seattle network flows are analyzed.)
 
 .. _partialgraph1:
 
-.. figure:: images/apt1-201302210010_18463-sfdp-SW-anon.png
+.. figure:: images/apt1-201302210010-18463-sfdp-SW-anon.png
    :alt: Patial Graph of APT1 Connection End Points
    :width: 80%
    :align: center
@@ -606,7 +606,7 @@ determine the severity of compromise.
 
 .. _partialgraph2:
 
-.. figure:: images/apt1-201302210010_18463-sfdp-NE-anon.png
+.. figure:: images/apt1-201302210010-18463-sfdp-NE-anon.png
    :alt: Connections to a Known Malicious Entity
    :width: 80%
    :align: center
@@ -617,7 +617,7 @@ determine the severity of compromise.
 
 .. _partialgraph3:
 
-.. figure:: images/apt1-201302210010_18463-sfdp-SE-anon.png
+.. figure:: images/apt1-201302210010-18463-sfdp-SE-anon.png
    :alt: Connections to an APT1 entity Unknown to CIF
    :width: 80%
    :align: center
