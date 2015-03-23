@@ -18,7 +18,7 @@ Courses of Action (CoA) to provide actionable intelligence to PRISEM members
 
 .. _ioccoalinks:
 
-.. figure:: images/STIX_Diagram_1.1-DIMS-w-bg.png
+.. figure:: images/STIX-Diagram-1-1-DIMS-w-bg.png
    :alt: Minimal linkage from Observables to COA
    :width: 95%
    :align: center
@@ -98,7 +98,7 @@ Cyber Threats* (UC2); *Managing Cyber Threat Response Activities* (UC3); and
 
 .. _stixusecases:
 
-.. figure:: images/STIX_use_cases.png
+.. figure:: images/STIX-use-cases.png
    :alt: STIX use cases
    :width: 95%
    :align: center
@@ -176,7 +176,7 @@ process.
 
 .. _stixelements:
 
-.. figure:: images/STIX_Diagram_Horizontal_1.1.png
+.. figure:: images/STIX-Diagram-Horizontal-1-1.png
    :alt: STIX IOCs
    :width: 95%
    :align: center
@@ -231,7 +231,7 @@ defined by MITRE:
    transition these tools into commercially available products that advance the
    state of the art in distributed incident response.
 
-.. _opstrustportalnow:
+.. _opstrustportalchanges:
 
 Ops-Trust portal Code Base
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
