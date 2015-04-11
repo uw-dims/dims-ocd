@@ -1,5 +1,7 @@
 .. DIMS Operational Concept Description documentation master file.
 
+.. _dimsoperationalconceptdescription:
+
 ====================================
 DIMS Operational Concept Description
 ====================================
