@@ -2,9 +2,9 @@
 
 .. _dimsoperationalconceptdescription:
 
-====================================
-DIMS Operational Concept Description
-====================================
+================================================
+DIMS Operational Concept Description v |version|
+================================================
 
 .. topic:: Executive Summary
 
