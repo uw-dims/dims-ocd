@@ -3,7 +3,7 @@
 .. _dimsoperationalconceptdescription:
 
 ================================================
-DIMS Operational Concept Description v |version|
+DIMS Operational Concept Description v |release|
 ================================================
 
 .. topic:: Executive Summary
