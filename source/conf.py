@@ -346,7 +346,7 @@ epub_exclude_files = ['search.html']
 
 intersphinx_cache_limit = -1   # days to keep the cached inventories (0 == forever)
 intersphinx_mapping = {
-        'dimssr': ('http://u12-dev-svr-1.prisem.washington.edu:8080/docs/develop/html/dims-sr',
-                    ('../../dims-sr/build/html/objects.inv',None))
+        'dimssr': ("%s/dims/docs/dims-sr" % os.environ['HOME'],
+                    ('http://u12-dev-svr-1.prisem.washington.edu:8080/docs/develop/html/dims-sr/objects.inv', None))
 }
 
