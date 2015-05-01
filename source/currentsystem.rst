@@ -61,6 +61,17 @@ federal law enforcement fusion center, and private sector organizations. Its
 benefits will include increased security and compliance capabilities, increased
 productivity, improved performance, and lower costs for participants.
 
+.. _prisemcapabilities:
+
+.. figure:: images/PRISEM-venn-v1.png
+   :alt: PRISEM capabilities
+   :width: 60%
+   :align: center
+
+   PRISEM capabilities
+
+..
+
 The intent of the PRISEM system is to combine standard security devices event
 log data using a commercial Security Information Event Management (SIEM)
 system, fed in part by event log data from the DHS-funded NetFlow based  system
@@ -71,32 +82,45 @@ to produce watchlists for real-time monitoring, as well as to provide
 historical attack context. A geographic front end provides a regional context
 to alerts in the system for at-a-glance situational awareness. The system now
 allows indicators of compromise (IOCs) to be used for both finding events that
-were missed in the past and/or watching for new events in the future.
+were missed in the past and/or watching for new events in the future. This
+is depicted in Figure :ref:`prisemcapabilities`.
 
 The primary mission of the PRISEM system is threefold:
 
-+ To *enhance the information security capabilities* of local government and
++ To **enhance the information security capabilities** of local government and
   address exposures to critical infrastructure, systems and services without
   significantly raising cost, by providing the means to obtain visibility into
   attacks against information technology resources;
 
-+ To *provide a method for reporting* cyber-security event or trend information
++ To **provide a method for reporting** cyber-security event or trend information
   in a consistent and automated fashion, for further evaluation by intelligence
   or law-enforcement communities in a manner that is respectful of national and
   international standards of individual privacy; and
 
-+ To *create an action-oriented operational setting* for the deployment of
++ To **create an action-oriented operational setting** for the deployment of
   research-grade technologies that were funded by the federal government, in
   order to evaluate their effectiveness and assist with their transition into
   commercial products.
 
-PRISEM is the first regional government collaboration to enter into a
+PRISEM is the first regional government collaboration in the United States
+to enter into a
 Cooperative Research and Development Agreement (CRADA) with US-CERT to receive
 de-classified IOCs. The intent is to receive and send these indicators using
 MITRE Corporation’s Structured Threat Information eXpression (STIX) format. The
 goal is to eventually link the IOCs with Tools/Tactics/Procedures (TTPs) and
 Courses of Action (CoA) to provide actionable intelligence to PRISEM members
-(see Figure 2).
+(see Figure :ref:`stixrelationships`).
+
+.. _stixrelationships:
+
+.. figure:: images/STIX_Diagram_Horizontal_1.1.png
+   :alt: Relationship of STIX Elements
+   :width: 80%
+   :align: center
+
+   Relationship of STIX Elements
+
+..
 
 In 2008 DHS released a document called the National Response Framework (FEMA,
 2008). The relationship building between hometown security and Homeland
@@ -142,9 +166,12 @@ the security and functionality of a diverse and complicated, yet
 institutionally critical cyber infrastructure. DIMS will be based on open
 source technology and standards.
 
+.. _operationalpca:
 
 Operational policies and constraints
 ------------------------------------
+
+.. _policies:
 
 Policies
 ~~~~~~~~
@@ -156,6 +183,8 @@ Policies
 + Policies for each of the SLTT government and private sector entities
   participating in the PRISEM system, and the PRISEM participant agreement,
   have privacy impacts when sharing information outside the project.
+
+.. _assumptions:
 
 Assumptions
 ~~~~~~~~~~~
@@ -169,6 +198,12 @@ Assumptions
   pre-requisite for the Ops-Trust stewards to allow the code to be released to
   the general public.
 
++ It is assumed that the open source tools necessary to provide the
+  full set of capabilities described here and in the DIMS
+  :ref:`dimssr:dimssystemrequirements` document, can be assembled in
+  such a manner that they provide the necessary features in a coherent
+  and integrated a manner.
+
 + We assume that the stakeholders who have expressed an interest in providing
   requirements and beta-testing feedback will follow through. It will be
   important to have at least two groups (beyond the Ops-Trust community and
@@ -177,6 +212,8 @@ Assumptions
   an organization like NCFTA, who is already familiar with the Ops-Trust portal
   system, can facilitate development and testing of the specific information
   sharing features that are part of their daily business processes.
+
+.. _constraints:
 
 Constraints
 ~~~~~~~~~~~
@@ -205,40 +242,6 @@ Constraints
 
 Description of current system or situation
 ------------------------------------------
-
-.. todo::
-
-    This paragraph shall provide a description of the current system or
-    situation, identifying differences associated with different states or
-    modes of operation (for example, regular, mainte-nance, training, degraded,
-    emergency, alternative-site, wartime, peacetime). The distinction between
-    states and modes is arbitrary. A system may be described in terms of states
-    only, modes only, states within modes, modes within states, or any other
-    scheme that is useful. If the system operates without states or modes, this
-    paragraph shall so state, without the need to create artificial
-    distinctions. The description shall include, as applicable:
-
-    + The operational environment and its characteristics
-
-    + Major system components and the interconnections among these components
-
-    + Interfaces to external systems or procedures
-
-    + Capabilities functions of the current system
-
-    + Charts and accompanying descriptions depicting inputs, outputs, data flow,
-      and manual and automated processes sufficient to understand the
-      current system or situation from the user's point of view.
-
-    + Performance characteristics, such as speed, throughput, volume,
-      frequency
-
-    + Quality attributes, such as reliability, maintainability, availability,
-      flexibility, portability, usability, efficiency
-
-    + Provisions for safety, security, privacy, and continuity of operations in emergencies
-
-..
 
 There are gaps in functionality in the existing sub-systems that DIMS is
 intended to address. The three primary sub-systems are: (1) the Ops-Trust
@@ -359,7 +362,11 @@ been done within PRISEM (see Section :ref:`` 2.2 Users and Other Stakeholders).
 
 .. todo::
 
-   FIX CROSS REFERENCES
+   .. note::
+
+       FIX CROSS REFERENCES
+
+   ..
 
 ..
 
@@ -378,60 +385,107 @@ visualization tools, or analytic algorithms that operate on the PRISEM
 datasets.
 
 
+.. _involvedpersonnel:
+
 Users or involved personnel
 ---------------------------
 
 .. todo::
 
-   This paragraph shall describe the types of users of the system, or personnel
-   involved in the current situation, including, as applicable, organizational
-   structures, training/skills, responsibilities, activities, and interactions
-   with one another.
+   .. note::
+
+       This paragraph shall describe the types of users of the system, or
+       personnel involved in the current situation, including, as applicable,
+       organizational structures, training/skills, responsibilities,
+       activities, and interactions with one another.
+
+   ..
 
 ..
 
-+ Select participants in the existing PRISEM system.
+The current PRISEM system has the following sets of users and
+involved personnel:
+
++ Participating sites are mostly contributors of event log data,
+  and consumers of alerts and reports. They receive notification
+  from either a managed security service vendor's Security Operations
+  Center (SOC) staff, or from the primary analyst working out of
+  the Seattle Fusion Center.
+
+  Select participants in the existing PRISEM system will be involved
+  in requirement collection, test and evaluation, and will be the
+  initial users of a DIMS deployment.
 
 + The current PRISEM principal analyst who interacts with the Seattle
-  Fusion Center.
+  Fusion Center will contribute to requirements (primarily in the form
+  of user stories), and will assist with test and evaluation of DIMS.
+
++ A research scientist at the University of Washington (also the PI
+  on this contract), who helped design and test capabilities in the
+  original PRISEM system, will contribute technical architectural
+  design, requirement definition, test and evaluation, documentation,
+  and initial user training on the DIMS system.
+
+.. _supportconcept:
 
 Support concept
 ---------------
 
 .. todo::
 
-   This paragraph shall provide an overview of the support concept for the
-   current system, including, as applicable to this document, support
-   agency(ies); facilities; equipment; support software; repair/replacement
-   criteria; maintenance levels and cycles; and storage, distribution, and
-   supply methods.
+   .. note::
+
+       This paragraph shall provide an overview of the support concept for the
+       current system, including, as applicable to this document, support
+       agency(ies); facilities; equipment; support software; repair/replacement
+       criteria; maintenance levels and cycles; and storage, distribution, and
+       supply methods.
 
 ..
 
 .. How is PRISEM supported now?
 
-The current PRISEM system is supported through grant funding, contracting with
+The current PRISEM system has been supported through grant funding, contracting with
 a commercial managed security service vendor who has working experience with
 the underlying commercial SIEM system originally chosen for use by PRISEM.
 This system is known as `Log Matrix` and is an end-of-life product now owned
-by Intel.
+by Intel subsequent to their acquisition of McAfee.
+
+Efforts are underway to create a non-profit, tax-exempt non-governmental
+organization who is capable of engaging with SLTT government entities via
+inter-local agreements. This entity will operate on a self-sustaining,
+fee-based model that has been described by Parker Montgomery in his report,
+"Organization Design: A Sustainable and Self-Sufficient Model for Washington
+State’s PRISEM Partnership" (see :ref:`referenceddocs`).
 
 .. todo::
 
-   What is lacking from PRISEM at present?
+   .. note::
+
+        What is lacking from PRISEM at present?
+
+   ..
 
 ..
 
 .. todo::
 
-   How does it need to change?
+    .. note::
+
+        How does it need to change?
+
+    ..
 
 ..
 
 
 .. todo::
 
-   Why is this relevant?
+    .. note::
+
+        Why is this relevant?
+
+    ..
 
 ..
 
