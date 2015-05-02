@@ -63,12 +63,30 @@ The structure of this document has been adapted principally from MIL-STD-498
 
 + Section :ref:`referenceddocs` lists related documents.
 
-.. todo::
++ Section :ref:`currentsystem` describes the current PRISEM system,
+  its sub-components, their capabilities and limitations, the
+  existing user base, and support concept.
 
-   .. warning::
++ Section :ref:`justifications` describes the justifications for
+  how the current system needs to change, why those changes are
+  relevant, alternatives, and assumptions/contraints.
 
-       Finish this section...
++ Section :ref:`newsystem` describes the concept of a new and
+  improved system and related issues.
 
-   ..
++ Section :ref:`operationalscenarios` provides operational
+  scenarios that will drive requirements and the system's
+  architectural design.
 
-..
++ Section :ref:`impacts` provides a summary of impacts
+  brought about by the new system.
+
++ Section :ref:`analysis` analyzes the advantages, disadvantages,
+  limitations, and alternatives/tradeoffs related to the new
+  system.
+
++ Section :ref:`notes` provides an alphabetical listing of acronyms and
+  abbreviations used in this document.
+
++ Section :ref:`license` includes the copyright and software license under
+  which DIMS is being released.
