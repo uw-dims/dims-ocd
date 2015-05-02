@@ -211,53 +211,65 @@ Description of current system or situation
 ------------------------------------------
 
 There are gaps in functionality in the existing sub-systems that DIMS is
-intended to address. The three primary sub-systems are: (1) the Ops-Trust
-portal; (2) The Collective Intelligence Framework (CIF) database; and (3) the
-PRISEM system. Each of these will be examined in turn.
+intended to address. The three primary sub-systems are: (1) the current PRISEM
+system; (2) The Collective Intelligence Framework (CIF) database; and (3) the
+Ops-Trust portal; Each of these will be examined in turn.
 
-.. _opstrustportalnow:
+.. _prisemnow:
 
-Ops-Trust portal Code Base
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+The PRISEM System
+~~~~~~~~~~~~~~~~~
 
-+ Handles adding users by nomination + vouching workflow processing
-+ Segregates trust groups (public or hidden) per administrator defined policy
-+ Facilitates encrypted communication via email, and out-of-band contact via phone, IM, etc.
-+ Provides a secure wiki for holding information contributed by users and other group knowledge
-+ Holds attributes about users:
++ Event collection, correlation, archiving
++ Distillation of hundreds of alerts per day from (low) tens of millions of events per day
++ Integrates the NetFlow :term:`Botnets System` behavioral detection capability
++ Requires intensive administration and coding when provisioning new tenants
++ Proprietary vendor portal the principal user interface
 
-    + Name, nick-name (handle) to identify them in wiki
-    + Telephone number for out-of-band communication
-    + Closest airport to facilitate meeting in person when on the road
-    + PGP (or GPG) encryption key
-    + Instant messaging system username
+PRISEM is the first regional government collaboration in the United States to
+enter into a Cooperative Research and Development Agreement (CRADA) with
+US-CERT to receive de-classified IOCs. The intent is to receive and send these
+indicators using MITRE Corporation’s Structured Threat Information eXpression
+(STIX) format. The goal is to eventually link the IOCs with
+Tools/Tactics/Procedures (TTPs) and Courses of Action (CoA) to provide
+actionable intelligence to PRISEM members (see Figure :ref:`stixrelationships`
+-- original source: Bret Jordan, Blue Coat Systems).
 
-.. What can the ops-trust portal do now?
+.. _stixrelationships:
 
-The Ops-Trust portal currently does a good job of the nomination and vouching
-workflow that allows user accounts to be set up and attributes populated. It
-then does a good job of segregating trust groups from each other, including
-facilitating encrypted email communications and storing data in a wiki.
+.. figure:: images/STIX-Diagram-Horizontal-1-1.png
+   :alt: Relationship of STIX Elements
+   :width: 80%
+   :align: center
 
-.. What is lacking from the ops-trust portal at present?
+   Relationship between STIX Elements
 
-There are several limitations to the way the Ops-Trust portal
-works and is used. All IOC data is passed around at present is in arbitrary
-forms (ASCII text columnar data in random field orderings, CSV files, PDF
-files, etc.) and may be in the body of an email, as a MIME attachment, or in a
-file specified by a URL in the body of the message. Often long lines of
-columnar data get wrapped and are difficult to read or parse with scripts.
-Cutting/pasting into security systems is difficult, if not impossible when
-thousands of lines of data are included in some random field in a large
-columnar list. Traffic Light Protocol (TLP)  tagging is done in random ways (if
-done at all), and TLP tags in the body of a message do not get included when an
-attached file is saved to disk. The subject line of emails includes the list
-and it, and the list trailer at the bottom of the email, must be manually
-scrubbed when forwarding a message off-list. Users must read every message in a
-thread in order to keep up on new data that may involve hosts or networks that
-the reader is responsible for protecting, and widespread and rapidly
-progressing events can generate dozens or even hundreds of messages in a day,
-which is difficult to keep up with.
+..
+
+.. What can PRISEM do now?
+
+The PRISEM system has demonstrated that sharing event logs within a trust
+community improves the situational awareness across regional SLTT government
+entities, that collaborative response improves everyone's capacity to respond
+and recover, and that situational awareness reports being fed back to the
+federal government through participation in Fusion Center activities. There are
+as many as five regional SLTT collaboration efforts that the PRISEM leadership
+has interacted with and who have expressed an interest in replicating what has
+been done within PRISEM (see Section :ref:`newusers`).
+
+.. What is lacking from PRISEM at present?
+
+There are limitations in what PRISEM is capable of doing, primarily based on
+the commercial off the shelf SIEM system at its core, and the reliance on a
+proprietary vendor portal for the user interface that PRISEM participants use
+on a daily basis. There is no flexible and secure real-time communication
+vehicle that PRISEM participants use on a regular basis, and interaction among
+PRISEM participants and analyst resources could be much higher. Also related to
+the use of the vendor portal is a limitation on the visualization and analytic
+capabilities. The portal only supports what the vendor has programmed it to
+support. There is no easy way to integrate newly developed features,
+visualization tools, or analytic algorithms that operate on the PRISEM
+datasets.
 
 .. _cif:
 
@@ -305,41 +317,49 @@ indicators of compromise (or confirmation of IOCs sent to the system or entered
 manually by analysts.) Were these events to be stored, they would be correlated
 with other IOCs and could be published as a feed to interested outside parties.
 
-.. _prisemnow:
+.. _opstrustportalnow:
 
-The PRISEM System
-~~~~~~~~~~~~~~~~~
+Ops-Trust portal Code Base
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-+ Event collection, correlation, archiving
-+ Distillation of hundreds of alerts per day from (low) tens of millions of events per day
-+ Integrates the NetFlow :term:`Botnets System` behavioral detection capability
-+ Requires intensive administration and coding when provisioning new tenants
-+ Proprietary vendor portal the principal user interface
++ Handles adding users by nomination + vouching workflow processing
++ Segregates trust groups (public or hidden) per administrator defined policy
++ Facilitates encrypted communication via email, and out-of-band contact via phone, IM, etc.
++ Provides a secure wiki for holding information contributed by users and other group knowledge
++ Holds attributes about users:
 
-.. What can PRISEM do now?
+    + Name, nick-name (handle) to identify them in wiki
+    + Telephone number for out-of-band communication
+    + Closest airport to facilitate meeting in person when on the road
+    + PGP (or GPG) encryption key
+    + Instant messaging system username
 
-The PRISEM system has demonstrated that sharing event logs within a trust
-community improves the situational awareness across regional SLTT government
-entities, that collaborative response improves everyone's capacity to respond
-and recover, and that situational awareness reports being fed back to the
-federal government through participation in Fusion Center activities. There are
-as many as five regional SLTT collaboration efforts that the PRISEM leadership
-has interacted with and who have expressed an interest in replicating what has
-been done within PRISEM (see Section :ref:`newusers`).
+.. What can the ops-trust portal do now?
 
-.. What is lacking from PRISEM at present?
+The Ops-Trust portal currently does a good job of the nomination and vouching
+workflow that allows user accounts to be set up and attributes populated. It
+then does a good job of segregating trust groups from each other, including
+facilitating encrypted email communications and storing data in a wiki.
 
-There are limitations in what PRISEM is capable of doing, primarily based on
-the commercial off the shelf SIEM system at its core, and the reliance on a
-proprietary vendor portal for the user interface that PRISEM participants use
-on a daily basis. There is no flexible and secure real-time communication
-vehicle that PRISEM participants use on a regular basis, and interaction among
-PRISEM participants and analyst resources could be much higher. Also related to
-the use of the vendor portal is a limitation on the visualization and analytic
-capabilities. The portal only supports what the vendor has programmed it to
-support. There is no easy way to integrate newly developed features,
-visualization tools, or analytic algorithms that operate on the PRISEM
-datasets.
+.. What is lacking from the ops-trust portal at present?
+
+There are several limitations to the way the Ops-Trust portal
+works and is used. All IOC data is passed around at present is in arbitrary
+forms (ASCII text columnar data in random field orderings, CSV files, PDF
+files, etc.) and may be in the body of an email, as a MIME attachment, or in a
+file specified by a URL in the body of the message. Often long lines of
+columnar data get wrapped and are difficult to read or parse with scripts.
+Cutting/pasting into security systems is difficult, if not impossible when
+thousands of lines of data are included in some random field in a large
+columnar list. Traffic Light Protocol (TLP)  tagging is done in random ways (if
+done at all), and TLP tags in the body of a message do not get included when an
+attached file is saved to disk. The subject line of emails includes the list
+and it, and the list trailer at the bottom of the email, must be manually
+scrubbed when forwarding a message off-list. Users must read every message in a
+thread in order to keep up on new data that may involve hosts or networks that
+the reader is responsible for protecting, and widespread and rapidly
+progressing events can generate dozens or even hundreds of messages in a day,
+which is difficult to keep up with.
 
 .. _involvedpersonnel:
 
