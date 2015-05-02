@@ -241,7 +241,7 @@ facilitating encrypted email communications and storing data in a wiki.
 
 .. What is lacking from the ops-trust portal at present?
 
-There are several weaknesses or limitations to the way the Ops-Trust portal
+There are several limitations to the way the Ops-Trust portal
 works and is used. All IOC data is passed around at present is in arbitrary
 forms (ASCII text columnar data in random field orderings, CSV files, PDF
 files, etc.) and may be in the body of an email, as a MIME attachment, or in a
