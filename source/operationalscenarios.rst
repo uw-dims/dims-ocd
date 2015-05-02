@@ -3,16 +3,12 @@
 Operational scenarios
 =====================
 
-.. todo::
-
-   This section shall describe one or more operational scenarios that
-   illustrate the role of the new or modified system, its interaction with
-   users, its interface to other systems, and all states or modes identified
-   for the system. The scenarios shall include events, actions, stimuli,
-   information, interactions, etc., as applicable.  Reference may be made to
-   other media, such as videos, to provide part or all of this information.
-
-..
+This section describes several operational scenarios that
+illustrate the role of DIMS, its interaction with
+users, its interface to other systems, and the states or modes identified
+for the system. These scenarios include events, actions, stimuli,
+information, interactions, etc., as applicable that form the basis for the
+requirements and user stories in :ref:`dimssr:dimssystemrequirements`.
 
 A common scenario occurring regularly today involves responding to what are
 known commonly as `botnets`, or distributed intruder attack networks constructed
@@ -182,38 +178,30 @@ and scheduling some common tasks to be run automatically so the results are
 waiting to be viewed, frees up the analyst to focus on the hard problems that
 require human intelligence. This is the only way to increase the velocity of
 the defender closer to that of the attacker as described by Col. John Boyd in
-his `OODA Loop` -- Observe, Orient, Decide, and Act -- construct.  (Boyd, 2008;
-Richards, 2009)
+his `OODA Loop` -- Observe, Orient, Decide, and Act -- construct.
+[Boy08]_, [Ric09]_
 
-.. todo::
+.. _missionoperationsscenarios:
 
-   Add citation to Boyd 2008, Richard 2009.
+Mission Operations Scenarios
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..
+In the following subsections, we will look at some common workflow processes
+involving IOCs in an operational context.  There are three primary use cases of
+workflows that the DIMS system must serve include the processing of
+IOCs:
 
-In the following subsections, we will look at some common workflow processes in
-an operational context.
+#. Sent into the system in a semi-automated manner;
 
-There are three primary use cases of workflows that the DIMS system must serve:
-
-#. Processing of indicators of compromise sent into the system in a
-   semi-automated manner;
-
-#. Processing of indicators of compromise entered manually in response to
-   external activities (e.g., collaboration in closed, vetted, trust
-   communities, from information passed along from law enforcement, etc.), and;
+#. Entered manually in response to external activities (e.g., collaboration in
+   closed, vetted, trust communities, from information passed along from law
+   enforcement, etc.), and;
 
 #. As discovered in the iterative and recursive steps taken by an analyst as
-   part of the network forensic process. These use cases parallel those
-   illustrated by MITRE on their STIX web site as UC1, UC3, and UC4.  (MITRE
-   2013) Each of these use cases will be described as a separate Mission
+   part of the network forensic process. These use cases parallel the MITRE
+   STIX uses cases UC1, UC3, and UC4 described in Section :ref:`changedescription`.
+   Each of these use cases will be described as a separate Mission
    Operations Scenario.
-
-.. todo::
-
-   Add cross-reference to STIX use case subsection and citation for MITRE 2013.
-
-..
 
 .. _automatediocsharing:
 
@@ -237,21 +225,15 @@ external-to-internal sharing followed by a reciprocal return
 internal-to-external sharing, and the other an internal-to-external sharing).
 Both have privacy sensitivities that require anonymization and controlled
 release of information.  The first is the situation where US-CERT will be
-sending de-classified IOCs to the PRISEM system in the form of STIX files
-(Mitre, 2012), to determine if known malicious activity seen at the federal
+sending de-classified IOCs to the PRISEM system in the form of STIX files,
+[The12]_ to determine if known malicious activity seen at the federal
 level is also being seen at the SLTT government level. This is automated input
 and manual (i.e., vetted and approved) output going back up to the federal
 level. (Other organizations, such as Microsoft's MAPP program, are similarly
-being established to share IOCs using STIX (Bluehat1, 2013), so STIX packages
+being established to share IOCs using STIX, [Blu13a]_, [Blu13b]_ so STIX packages
 will become a general input mechanism. An example [abbreviated] STIX file that
 holds IP addresses and CIDR blocks extracted from a CIF database for use as a
 `watchlist` is shown in Figure :ref:`stixwatchlist`.)
-
-.. todo::
-
-   Add citations MITRE 2012, Bluehat 2013, and fix Figure cross-reference.
-
-..
 
 .. _stixwatchlist:
 
@@ -332,13 +314,7 @@ The final use case is the most complex, as it involves a series of iterative
 and recursive queries of available data, going back and forth through time, and
 extending outward from an initial point to build a network of known hosts
 involved in various phases (see Figure :ref:`indicatorlifecycle`) of what is
-known as the `cyber kill chain` (Hutchins et al, 2011).
-
-.. todo::
-
-   Add citation to Hutchins 2011.
-
-..
+known as the `cyber kill chain`. [HCA11]_
 
 The steps described in Section :ref:`analysisscenario` and the previous two
 workflows are repeated, following the process shown in
@@ -356,13 +332,10 @@ primitive forms-based browser interfaces that are not designed to maintain and
 use state (e.g., knowledge gained by the analyst in previous steps) between
 invocations.
 
-This capability is illustrated in Mission Support Scenarios.
+.. _missionsupportscenarios:
 
-.. todo::
-
-   Update the last sentence to refer to the right section.
-
-..
+Mission Support Scenarios
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 We will now look at some other general Mission Support Scenarios that focus on
 improving the efficiency of daily communications workflow processes.
@@ -370,7 +343,7 @@ improving the efficiency of daily communications workflow processes.
 .. _trackingremediation:
 
 Tracking Status of Remediation Efforts
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A regular occurrence within the Ops-Trust community is someone reporting a
 large number of hosts or network autonomous system (AS) numbers that have
@@ -420,7 +393,7 @@ mitigation, statistics over time, etc.
 .. _identifyfriendorfoe:
 
 Situational Awareness Through "Identifying Friend or Foe"
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 When trying to analyze events and alerts in a haystack of data, one method of
 extracting meaning from the data is to organize it according to facts that are
@@ -562,19 +535,13 @@ network flows can be seen in Figure :ref:`fullapt1graph` (close-up views of
 this large graph are found in subsequent figures) These are undirected graphs
 of connections associated with the set of IOCs released by the FBI in Joint
 Indicator Bulletin (JIB) #INC260425 in the wake of the release by Mandiant of
-their `APT1 report` (Mandiant, 2013). Of the 632 IP addresses in the JIB list,
+their `APT1 report`. [Man13]_ Of the 632 IP addresses in the JIB list,
 it was possible to identify over 7000 flow records associated with 106 hosts on
 the City of Seattle’s network over the previous 180 days. All of those flows
 were related to just 22 hosts out of the FBI’s list of 632. A search of event
 logs archived in the PRISEM SIEM identified another three SLTT entities who
 also had logged events corresponding with indicators on the FBI’s list. (In
 this section, only the City of Seattle network flows are analyzed.)
-
-.. todo::
-
-   Add citation to Mandiant APT report.
-
-..
 
 .. _partialgraph1:
 
@@ -631,4 +598,9 @@ non-Friend nodes; Type of activity for `Foe` nodes as known to CIF (including
 first seen, last seen, etc.); Characterization of identified flows and
 identified log events (including ports, protocols, start time, duration, etc.).
 
-
+.. [Boy08] John R. Boyd (Col.). Boyd’s OODA "Loop" From "The Essence of Winning and Losing", 2008. Available at http://www.d-n-i.net/fcs/ppt/boyds_ooda_loop.ppt.
+.. [Ric09] Chet Richards. Briefings - Colonel John R. Boyd, USAF. http://www.ausairpower.net/APA-Boyd-Papers.html, November 2009.
+.. [Blu13a] Bluehat1. New MAPP Initiatives. http://blogs.technet.com/b/bluehat/archive/2013/07/29/new-mapp-initiatives.aspx, July 2013. BlueHat Blog.
+.. [Blu13b] Bluehat1. MAPP Initiatives Update – Knowledge Exchange Platform. http://blogs.technet.com/b/bluehat/archive/2013/09/16/mapp-initiatives-update-knowledge-exchange-platform.aspx, September 2013. BlueHat Blog.
+.. [HCA11] Eric Hutchins, Michael Cloppert, and Rohan Amin. Intelligence-Driven Computer Network Defense Informed by Analysis of Adversary Campaigns and Intrusion Kill Chains. In 6th Annual International Conference on Information Warfare and Security. Lockheed Martin Corporation, http://www.lockheedmartin.com/content/dam/lockheed/data/corporate/documents/LM-White-Paper-Intel-Driven-Defense.pdf, December 2011.
+.. [Man13] Mandiant. APT1: Exposing One of China’s Cyber Espionage Units. http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf, February 2013.
