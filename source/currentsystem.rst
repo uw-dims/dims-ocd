@@ -327,16 +327,6 @@ as many as five regional SLTT collaboration efforts that the PRISEM leadership
 has interacted with and who have expressed an interest in replicating what has
 been done within PRISEM (see Section :ref:`newusers`).
 
-.. todo::
-
-   .. note::
-
-       FIX CROSS REFERENCES
-
-   ..
-
-..
-
 .. What is lacking from PRISEM at present?
 
 There are limitations in what PRISEM is capable of doing, primarily based on
@@ -393,36 +383,6 @@ the underlying commercial SIEM system originally chosen for use by PRISEM.
 This system is known as `Log Matrix` and is an end-of-life product now owned by
 Intel subsequent to their acquisition of McAfee.
 
-.. todo::
-
-   .. note::
-
-        What is lacking from PRISEM at present?
-
-   ..
-
-..
-
-.. todo::
-
-    .. note::
-
-        How does it need to change?
-
-    ..
-
-..
-
-
-.. todo::
-
-    .. note::
-
-        Why is this relevant?
-
-    ..
-
-..
 
 .. [Exe03] Executive Office of the President. Homeland Security Presidential Directive 7: Critical Infrastructure Identification, Prioritization, and Protection. http://www.dhs.gov/xabout/laws/gc_1214597989952.shtm, December 2003.
 .. [Fed08] Federal Emergency Management Agency. National Response Framework. http://www.fema.gov/pdf/emergency/nrf/nrf-core.pdf, January 2008.
