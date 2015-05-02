@@ -22,103 +22,7 @@ Background, objectives, and scope
 
 ..
 
-#. The DIMS system must have the ability to process structured data that is
-   entered into the system in one of several ways: (1) attached to email
-   messages being sent to the Ops-Trust portal (optionally as encrypted
-   attachments); (2) via CIF feed, TAXII, AMQP message bus, or other
-   asynchronous automated mechanism; (3) as uploaded from a user’s workstation
-   via the DIMS dashboard client; (4) via the Tupelo client or other command
-   line mechanism.
-
-#. The DIMS system must have the ability to store additional attributes for
-   each user (such as which CIDR blocks they are responsible for protecting,
-   which top level Domain Name System domains, and/or which high-level
-   activities (e.g., campaigns) they wish to monitor. This capability allows
-   the system to notify the user when there are messages or email threads of
-   interest, and to facilitate providing regular tailored reports or alerts
-   about activity of interest to them. These attributes also support the basis
-   for role-based access controls. This real-time situational awareness
-   capability is one of the most important features that will improve response
-   and reaction time, as it removes the necessity to read and process every
-   single message that flows through the system at a given time, or to manually
-   trigger reports or searches to get situational awareness.
-
-#. The DIMS system must be able to detect when IP addresses or domain names
-   associated with a given set of CIDR blocks or top-level domains are
-   involved, and to trigger one or more workflow processes. This could be to
-   send an alert to a user when some entity they are watching is found in a
-   communication, generate a scheduled report, or trigger some other
-   asynchronous event. It may be to initiate a search of available data so the
-   results can be ready for a user to view when they receive the alert, rather
-   than requiring that they initiate a search at that time and have to wait for
-   the results.
-
-#. The DIMS system must have the ability to process structured data attached to
-   email messages being sent to the Ops-Trust portal (optionally as encrypted
-   attachments), identified by a tag in instant messages or IRC chat (e.g., a
-   URL referencing a data file in a Redis or other `NoSQL` database), as well
-   as detecting when IP addresses or domain names associated with a given set
-   of CIDR blocks or top level domains are found in arbitrary text streams. 
-
-#. The DIMS system must be able to keep track of multiple incidents, campaigns,
-   sector-specific threat activity, or other ad-hoc groupings of security
-   information as desired by DIMS users. For example, an analyst may wish to
-   track ZeroAccess trojan activity, CryptoLocker extortion attempts, Zeus or
-   Citadel ACH fraud attempts, etc., possibly over time periods measured in
-   years.  Each user may wish to label these associated sets with their own
-   labels, or may want to use a system-wide naming scheme that conforms to an
-   ontology that is more rigorously defined. These sets should be easily shared
-   with other users.
-
-#. The DIMS system should support knowledge acquisition by allowing the user to
-   be told, on login and when they focus on a particular incident or campaign,
-   what new information has been obtained from other users of the system (or
-   the system itself through automated detection and reporting) since the last
-   time the user was reviewing the incident or campaign. Collaboration works
-   best when team members learn from each other, and the asynchronous nature of
-   a multi-user system is such that determining the delta in knowledge since an
-   earlier point in time is difficult to achieve. (This is related to the issue
-   of tracking incoming information in email threads listed earlier.)
-
-#. The DIMS system should summarize any/all aggregate data that any user is
-   presented with sufficient context to quickly understand the data. This
-   includes (but is not limited to): Start and end date and time; Total number
-   of systems within the `friend` population, and how they break down across
-   participants; Total number of systems outside of the `friend` population,
-   and how they break down by country/AS/IP address(es); Total number of
-   systems from the `not-friend` population that are known to be malicious
-   (a.k.a., `foe`), broken down by country/AS/IP address(es). When the number
-   of IP addresses exceeds a certain threshold, they are summarized in
-   aggregate, with a mechanism to dig down if the user so chooses. Similarly,
-   context about what quantity and quality of malicious activity that is known
-   about the `foe` population should also be available for easy access
-   (presented if short, or drill-down provided it too voluminous). This amount
-   and level of detail provides an overall `situational awareness` or scoping
-   of for large volumes of security event data.  (The mechanism for such
-   multi-level tabular reports is known as `break`  or `step`  reports).
-
-#. The DIMS server components must be provisioned, configured, and administered
-   from a single central location and pushed to servers in an automated
-   fashion. Manual configuration and patching of hosts takes too much expert
-   system administration knowledge, incurs too much system administration
-   overhead, and takes too long to recover from outages or system upgrades. The
-   DIMS team will be administering multiple instances of the DIMS system (for
-   development, alpha testing, beta testing, a "production" PRISEM instance for
-   in-field test and evaluation, and potentially 3-5 more instances at other
-   regions (see the Stakeholders section). It will be impossible to manually
-   manage that many deployments with current staffing levels.
-
-#. The systems running DIMS software must support continuous integration of
-   code releases, updating runtime executables, stopping and starting service
-   daemons, etc., in a controlled and repeatable manner. Runtime components
-   must identify the source code release from which they were built in order to
-   track bugs and features across multiple deployments with a regular release
-   cycle measured in weeks (2-4 weeks is anticipated). The system will be built
-   using an Agile coding methodology, responding to user feedback as quickly as
-   possible to ensure maximum usability and scalability.
-
-
-
+.. _oppoliciescontraints:
 
 Operational policies and constraints
 ------------------------------------
@@ -129,6 +33,8 @@ Operational policies and constraints
    apply to the new or modified system.
 
 ..
+
+.. _descriptionnewsystem:
 
 Description of the new or modified system
 -----------------------------------------
@@ -167,10 +73,10 @@ Description of the new or modified system
 
 ..
 
-.. _users:
+.. _newusers:
 
-Users/affected personnel
-------------------------
+Users/Affected Personnel for New System
+---------------------------------------
 
 .. todo::
 
@@ -180,7 +86,8 @@ Users/affected personnel
 
 ..
 
-The full list of stakeholders includes:
+The full list of stakeholders and prospective users of the new
+system includes:
 
 #. *PRISEM participants*: Existing participants in the PRISEM project in the
    Puget Sound will be the primary users of the DIMS system. DIMS is being
@@ -257,10 +164,22 @@ Support concept
 
 .. todo::
 
-   This paragraph shall provide an overview of the support concept for the new
-   or modified system, including, as applicable, support agency(ies);
-   facilities; equipment; support software; repair/replacement criteria;
-   maintenance levels and cycles; and storage, distribution, and supply
-   methods.
+    .. note::
+
+        This paragraph shall provide an overview of the support concept for the
+        new or modified system, including, as applicable, support agency(ies);
+        facilities; equipment; support software; repair/replacement criteria;
+        maintenance levels and cycles; and storage, distribution, and supply
+        methods.
+
+    ..
 
 ..
+
+Efforts are underway to create a non-profit, tax-exempt non-governmental
+organization who is capable of engaging with SLTT government entities via
+inter-local agreements. This entity will operate on a self-sustaining,
+fee-based model that has been described by Parker Montgomery in his report,
+"Organization Design: A Sustainable and Self-Sufficient Model for Washington
+State’s PRISEM Partnership" (see :ref:`referenceddocs`).
+

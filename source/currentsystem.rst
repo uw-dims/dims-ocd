@@ -6,7 +6,7 @@ Current system or situation
 Background, objectives, and scope
 ---------------------------------
 
-Homeland Security Presidential Directive 7 (`HSPD-7`_), released in 2003, set
+Homeland Security Presidential Directive 7 (HSPD-7), [Exe03]_ released in 2003, set
 in motion a number of policy changes and created awareness of a new problem --
 the term for which is now ingrained into our lexicon: critical infrastructure
 protection. That document specifies the actions to be taken to identify,
@@ -102,39 +102,21 @@ The primary mission of the PRISEM system is threefold:
   order to evaluate their effectiveness and assist with their transition into
   commercial products.
 
-PRISEM is the first regional government collaboration in the United States
-to enter into a
-Cooperative Research and Development Agreement (CRADA) with US-CERT to receive
-de-classified IOCs. The intent is to receive and send these indicators using
-MITRE Corporation’s Structured Threat Information eXpression (STIX) format. The
-goal is to eventually link the IOCs with Tools/Tactics/Procedures (TTPs) and
-Courses of Action (CoA) to provide actionable intelligence to PRISEM members
-(see Figure :ref:`stixrelationships` -- original source: Bret Jordan, Blue Coat
-Systems).
+In 2008 The Federal Emergency Mangement Agency, part of DHS, released the
+National Response Framework. [Fed08]_ The relationship building between
+hometown security and Homeland security began to form an enduring partnership.
+As part of its commitment to hometown security, "DHS has worked to get tools,
+information, and resources out of Washington, D.C. and into the hands of our
+federal, state, local, tribal and territorial law enforcement partners."
+[Dep13]_ The PRISEM project, initiated this same year, is an example of this
+effort to bring these resources to the SLTT government level. It has served
+this purpose, but to date only in the Puget Sound region.
 
-.. _stixrelationships:
+Fast forward to February 2013. The President of the United States issues two
+new policies:
 
-.. figure:: images/STIX-Diagram-Horizontal-1-1.png
-   :alt: Relationship of STIX Elements
-   :width: 80%
-   :align: center
-
-   Relationship between STIX Elements
-
-..
-
-In 2008 DHS released a document called the National Response Framework (FEMA,
-2008). The relationship building between hometown security and Homeland
-security began to form an enduring partnership.  As part of its commitment to
-hometown security, "DHS has worked to get tools, information, and resources out
-of Washington, D.C. and into the hands of our federal, state, local, tribal and
-territorial law enforcement partners."  The PRISEM project, initiated this same
-year, is an example of this effort to bring these resources to the SLTT
-government level. It has served this purpose, but to date only in the Puget
-Sound region.  Fast forward to February 2013. The President of the United
-States issues two new policies: 1) Executive Order 13636: Improving Critical
-Infrastructure Cybersecurity 2) Presidential Policy Directive 21: Critical
-Infrastructure Security and Resilience.
+#. Executive Order 13636: Improving Critical Infrastructure Cybersecurity [Exe13a]_ and
+#. Presidential Policy Directive 21: Critical Infrastructure Security and Resilience. [Exe13b]_
 
 These two documents (known as *EO 13636* and *PPD 21*) reflect the
 acknowledgement that:
@@ -150,22 +132,6 @@ acknowledgement that:
 + A strong partnership between the public and private sector, as well as
   between SLTT government entities in regions of the country, is crucial in
   reducing the risk to these vital systems.
-
-Knowledge is becoming a critical success factor for organizational performance.
-Many public and private organizations are sharing knowledge as one of the means
-to collaborate and gain sustainable competitive advantage over these threats.
-Advances made in information and communication technology (ICT) is aiding these
-efforts. The need for infrastructure protection and real-time to near-real-time
-automated response to cyber threats to enable expedient top-level decisions has
-become imperative. However, a widely accepted framework for visualization,
-analytics, situational awareness, enabling intraregional response to shared
-threats does not exist today. To address these concerns, a system called the
-Distributed Incident Management System (DIMS) will be built. DIMS will be based
-mostly on existing technology and emerging standards. The primary users of DIMS
-are the Computer Security Incident Response Teams (CSIRTs) who need to maintain
-the security and functionality of a diverse and complicated, yet
-institutionally critical cyber infrastructure. DIMS will be based on open
-source technology and standards.
 
 .. _operationalpca:
 
@@ -359,7 +325,7 @@ and recover, and that situational awareness reports being fed back to the
 federal government through participation in Fusion Center activities. There are
 as many as five regional SLTT collaboration efforts that the PRISEM leadership
 has interacted with and who have expressed an interest in replicating what has
-been done within PRISEM (see Section :ref:`` 2.2 Users and Other Stakeholders).
+been done within PRISEM (see Section :ref:`newusers`).
 
 .. todo::
 
@@ -385,24 +351,10 @@ support. There is no easy way to integrate newly developed features,
 visualization tools, or analytic algorithms that operate on the PRISEM
 datasets.
 
-
 .. _involvedpersonnel:
 
-Users or involved personnel
----------------------------
-
-.. todo::
-
-   .. note::
-
-       This paragraph shall describe the types of users of the system, or
-       personnel involved in the current situation, including, as applicable,
-       organizational structures, training/skills, responsibilities,
-       activities, and interactions with one another.
-
-   ..
-
-..
+Users/Involved personnel for Current System
+-------------------------------------------
 
 The current PRISEM system has the following sets of users and
 involved personnel:
@@ -432,32 +384,14 @@ involved personnel:
 Support concept
 ---------------
 
-.. todo::
-
-   .. note::
-
-       This paragraph shall provide an overview of the support concept for the
-       current system, including, as applicable to this document, support
-       agency(ies); facilities; equipment; support software; repair/replacement
-       criteria; maintenance levels and cycles; and storage, distribution, and
-       supply methods.
-
-..
-
 .. How is PRISEM supported now?
 
-The current PRISEM system has been supported through grant funding, contracting with
-a commercial managed security service vendor who has working experience with
+The current PRISEM system has been supported through grant funding, support for
+hosting hardware by entities at the University of Washington, and contracting
+with a commercial managed security service vendor with working experience with
 the underlying commercial SIEM system originally chosen for use by PRISEM.
-This system is known as `Log Matrix` and is an end-of-life product now owned
-by Intel subsequent to their acquisition of McAfee.
-
-Efforts are underway to create a non-profit, tax-exempt non-governmental
-organization who is capable of engaging with SLTT government entities via
-inter-local agreements. This entity will operate on a self-sustaining,
-fee-based model that has been described by Parker Montgomery in his report,
-"Organization Design: A Sustainable and Self-Sufficient Model for Washington
-State’s PRISEM Partnership" (see :ref:`referenceddocs`).
+This system is known as `Log Matrix` and is an end-of-life product now owned by
+Intel subsequent to their acquisition of McAfee.
 
 .. todo::
 
@@ -490,6 +424,10 @@ State’s PRISEM Partnership" (see :ref:`referenceddocs`).
 
 ..
 
-
+.. [Exe03] Executive Office of the President. Homeland Security Presidential Directive 7: Critical Infrastructure Identification, Prioritization, and Protection. http://www.dhs.gov/xabout/laws/gc_1214597989952.shtm, December 2003.
+.. [Fed08] Federal Emergency Management Agency. National Response Framework. http://www.fema.gov/pdf/emergency/nrf/nrf-core.pdf, January 2008.
+.. [Dep13] Department of Homeland Security. Strengthening the Security and Resilience of the Nation's Critical Infrastructure. http://www.dhs.gov/strengthening-security-and-resilience-nation's-critical-infrastructure, August 2013.
+.. [Exe13a] Executive Office of the President. Executive Order No. 13636. http://www.fas.org/irp/offdocs/eo/eo-13636.pdf, February 2013.
+.. [Exe13b] Executive Office of the President. Presidential Policy Directive – Critical Infrastructure Security and Resilience/PPD-21. http://www.whitehouse.gov/the-press-office/2013/02/12/presidential-policy-directive-critical-infrastructure-security-and-resil, February 2013.
 
 .. _HSPD-7: http://www.dhs.gov/homeland-security-presidential-directive-7
