@@ -114,9 +114,9 @@ suspected botnet related event helps illustrate the process:
 
 #. The analyst may then query CIF using the web browser interface to see if
    this specific IP address, seen in the identified flows from the previous
-   step, has any information about it. Figure 7 confirms that it does
-   (including showing a record of the search for the suspicious CIDR block from
-   a previous step).
+   step, has any information about it. Figure :ref:`ciffulloutput` confirms
+   that it does (including showing a record of the search for the suspicious
+   CIDR block from a previous step).
 
    .. _ciffulloutput:
 
@@ -245,7 +245,7 @@ level. (Other organizations, such as Microsoft's MAPP program, are similarly
 being established to share IOCs using STIX (Bluehat1, 2013), so STIX packages
 will become a general input mechanism. An example [abbreviated] STIX file that
 holds IP addresses and CIDR blocks extracted from a CIF database for use as a
-`watchlist` is shown in Figure 10.)
+`watchlist` is shown in Figure :ref:`stixwatchlist`.)
 
 .. todo::
 
@@ -264,12 +264,6 @@ holds IP addresses and CIDR blocks extracted from a CIF database for use as a
 
 ..
 
-.. todo::
-
-   Get a more recent example from Stuart.
-
-..
-
 The second is automated determination of the `sources` of confirmed malicious
 activity seen at the SLTT level that is collected on a daily basis and prepared
 for sharing with federal law enforcement and counter-intelligence agents to
@@ -283,8 +277,12 @@ connections with the source (should they chose to make such a connection.)
 
 .. todo::
 
-   Talk to Anderson Nascimento about getting a sentence or two about
-   the encrypted set comparison idea we have been talking about.
+    .. note::
+
+        Talk to Anderson Nascimento about getting a sentence or two about the
+        encrypted set comparison idea we have been talking about.
+
+    ..
 
 ..
 
