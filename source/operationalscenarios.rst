@@ -404,16 +404,61 @@ participant (a.k.a., `friend`), or known to not be a PRISEM participant.
 
 .. _netmapping:
 
-.. figure:: images/participant-id-mapping.png
-   :alt: Participant identification mapping
-   :width: 60%
-   :align: center
+.. list-table:: Participant identification mapping
+   :widths: 20 20 20
+   :header-rows: 1
 
-   Participant identification mapping
+   * - CIDR or Domain
+     - Site ID
+     - Participant
+
+   * - 156.74.0.0/16
+     - CTYSEA
+     - CTYSEA
+
+   * - .seattle.gov
+     - CTYSEA
+     - CTYSEA
+
+   * - .seattle.wa.gov
+     - CTYSEA
+     - CTYSEA
+
+   * - .seattle.wa.us
+     - CTYSEA
+     - CTYSEA
+
+   * - 192.103.189.0/24
+     - PORTTAC
+     - PORTTAC
+
+   * - 66.113.101.0/24
+     - PORTTAC
+     - PORTTAC
+
+   * - .portoftacoma.com
+     - PORTTAC
+     - PORTTAC
+
+   * - 174.127.160.0/24
+     - COB
+     - BELLWA
+
+   * - 12.17.152.0/23
+     - COB
+     - BELLWA
+
+   * - .bellevue.gov
+     - COB
+     - BELLWA
+
+   * - .ci.bellevue.wa.us
+     - COB
+     - BELLWA
 
 ..
 
-Figure :ref:`netmapping` illustrates how organizational top-level domains
+Table :ref:`netmapping` illustrates how organizational top-level domains
 and/or CIDR blocks for a subset of PRISEM participants are mapped to their Site
 ID strings and chosen anonymization strings (i.e., the label that participant
 would like to use to mask their internal IP addresses and host names in reports
@@ -422,13 +467,6 @@ logs are ingested into the PRISEM system, they are processed so as to associate
 them with the site from which they came. Once in the historic log archives, an
 analyst may search for a specific observable (e.g., `show me all connections
 to/from a specific suspect IP address.`) 
-
-.. todo::
-
-   Update the mapping figure to remove Seattle Childrens. (They are no
-   longer a PRISEM participant.)
-
-..
 
 Using this mapping of domains and CIDR blocks to participants, it is possible
 to identify all records in search results that are associated with any of the
