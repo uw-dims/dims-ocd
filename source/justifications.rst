@@ -14,7 +14,7 @@ de-classified IOCs. The intent is to receive and send these indicators using
 MITRE Corporation’s Structured Threat Information eXpression (STIX) format. The
 goal is to eventually link the IOCs with Tools/Tactics/Procedures (TTPs) and
 Courses of Action (CoA) to provide actionable intelligence to PRISEM members
-(see Figure :ref:`stixelements`).
+(see Figure :ref:`stixrelationships`).
 
 .. _ioccoalinks:
 
@@ -174,17 +174,6 @@ to the known good or known bad sets.) Keeping track of the growing body of
 known good and known bad is a requirement of the workflow for this discovery
 process.
 
-.. _stixelements:
-
-.. figure:: images/STIX-Diagram-Horizontal-1-1.png
-   :alt: STIX IOCs
-   :width: 95%
-   :align: center
-
-   Relationship between STIX  Elements (Source: Bret Jordan, Blue Coat Systems)
-
-..
-
 The objective of the DIMS system is to support the following high-level
 missions and needs, which incorporate the four use cases described above as
 defined by MITRE:
@@ -208,7 +197,8 @@ defined by MITRE:
    and the PRISEM project), may come from other trust groups (be they
    sector-specific, regional, or self-organized), or may come from federal law
    enforcement agents in the local field office. As IOCs and Observables are
-   linked with TTPs and COAs (see Figure 2 for an example of this linkage), the
+   linked with TTPs and COAs (see Figure :ref:`stixrelationships`
+   for an example of this linkage), the
    users can more quickly and efficiently respond and recover. (UC2, UC3, and
    UC4)
 
