@@ -404,9 +404,13 @@ Priorities among the changes
 
 .. todo::
 
-   This paragraph shall identify priorities among the needed changes. It shall,
-   for example, identify each change as essential, desirable, or optional, and
-   prioritize the desirable and optional changes.
+    .. note::
+
+        This paragraph shall identify priorities among the needed changes. It
+        shall, for example, identify each change as essential, desirable, or
+        optional, and prioritize the desirable and optional changes.
+
+    ..
 
 ..
 
@@ -415,20 +419,38 @@ Changes considered but not included
 
 .. todo::
 
-   This paragraph shall identify changes considered but not included in
-   :ref:`changedescription`, and rationale for not including them.
+    .. note::
+
+        This paragraph shall identify changes considered but not included in
+        :ref:`changedescription`, and rationale for not including them.
+
+    ..
 
 ..
+
+.. _assumptionsconstraints:
 
 Assumptions and constraints
 ---------------------------
 
-.. todo::
+The following assumptions and contraints are applicable to the changes identified
+in this section:
 
-   This paragraph shall identify any assumptions and constraints applicable to
-   the changes identified in this section.
++ The use of open source tools brings with it the challenge of integrating
+  a number of code bases that are written in different programming languages, have
+  different coding styles, differing interfaces and input/output data formats
+  and mechanisms, run on different operating systems, have specific and possibly
+  incompatible pre-requisites, may have duplication in (or conflicting choices of)
+  database mechanisms, and may have little or poor documentation.
 
-..
++ Attempting to balance all of the differences mentioned in the previous bullet
+  will push all team members to the limits of their technical ability.
+
++ Hardware, network resources, and data center limitations can cause friction
+  due to limitations on access to data center facilities, the distributed
+  nature of the development team, and where certain services can/should run.
+
+
 
 .. _STIX FAQ #B1: http://stix.mitre.org/about/faqs.html#B1
 .. _STIX FAQ #B2: http://stix.mitre.org/about/faqs.html#B2
