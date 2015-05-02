@@ -109,16 +109,17 @@ de-classified IOCs. The intent is to receive and send these indicators using
 MITRE Corporation’s Structured Threat Information eXpression (STIX) format. The
 goal is to eventually link the IOCs with Tools/Tactics/Procedures (TTPs) and
 Courses of Action (CoA) to provide actionable intelligence to PRISEM members
-(see Figure :ref:`stixrelationships`).
+(see Figure :ref:`stixrelationships` -- original source: Bret Jordan, Blue Coat
+Systems).
 
 .. _stixrelationships:
 
-.. figure:: images/STIX_Diagram_Horizontal_1.1.png
+.. figure:: images/STIX-Diagram-Horizontal-1-1.png
    :alt: Relationship of STIX Elements
    :width: 80%
    :align: center
 
-   Relationship of STIX Elements
+   Relationship between STIX Elements
 
 ..
 
