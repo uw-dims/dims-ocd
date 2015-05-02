@@ -3,60 +3,30 @@
 Justification for and nature of changes
 =======================================
 
+PRISEM is the first regional government collaboration in the United States to
+enter into a Cooperative Research and Development Agreement (CRADA) with
+US-CERT to receive de-classified IOCs. The intent is to receive and send these
+indicators using MITRE Corporation’s Structured Threat Information eXpression
+(STIX) format. The goal is to eventually link the IOCs with
+Tools/Tactics/Procedures (TTPs) and Courses of Action (CoA) to provide
+actionable intelligence to PRISEM members (see Figure :ref:`stixrelationships`
+-- original source: Bret Jordan, Blue Coat Systems).
+
+.. _stixrelationships:
+
+.. figure:: images/STIX-Diagram-Horizontal-1-1.png
+   :alt: Relationship of STIX Elements
+   :width: 80%
+   :align: center
+
+   Relationship between STIX Elements
+
+..
+
 .. _changejustification:
 
 Justification for change
 ------------------------
-
-PRISEM is the first regional government collaboration to enter into a
-Cooperative Research and Development Agreement (CRADA) with US-CERT to receive
-de-classified IOCs. The intent is to receive and send these indicators using
-MITRE Corporation’s Structured Threat Information eXpression (STIX) format. The
-goal is to eventually link the IOCs with Tools/Tactics/Procedures (TTPs) and
-Courses of Action (CoA) to provide actionable intelligence to PRISEM members
-(see Figure :ref:`stixrelationships`).
-
-.. _ioccoalinks:
-
-.. figure:: images/STIX-Diagram-1-1-DIMS-w-bg.png
-   :alt: Minimal linkage from Observables to COA
-   :width: 95%
-   :align: center
-
-   Linking minimal subset of STIX elements from Observables to COA
-
-..
-
-In 2008 DHS released a document called the National Response Framework (FEMA,
-2008). The relationship building between hometown security and Homeland
-security began to form an enduring partnership.  As part of its commitment to
-hometown security, "DHS has worked to get tools, information, and resources out
-of Washington, D.C. and into the hands of our federal, state, local, tribal and
-territorial law enforcement partners." [Dep13]_ The PRISEM project, initiated
-this same year, is an example of this effort to bring these resources to the
-SLTT government level. It has served this purpose, but to date only in the
-Puget Sound region.
-
-Fast forward to February 2013. The President of the United States issues two
-new policies:
-
-#. Executive Order 13636: Improving Critical Infrastructure Cybersecurity [Exe13a]_ and
-#. Presidential Policy Directive 21: Critical Infrastructure Security and Resilience. [Exe13b]_
-
-These two documents (known as *EO 13636* and *PPD 21*) reflect the
-acknowledgement that:
-
-+ America's national security and economic prosperity are dependent upon the
-  operation of critical infrastructure that is increasingly at risk to the
-  effects of cyber attacks.
-
-+ The vast majority of U.S. critical infrastructure is owned and operated by
-  the private sector and/or State, Local, Territorial, and Tribal (SLTT)
-  government entities, not by the federal government.
-
-+ A strong partnership between the public and private sector, as well as
-  between SLTT government entities in regions of the country, is crucial in
-  reducing the risk to these vital systems.
 
 Knowledge is becoming a critical success factor for organizational performance.
 Many public and private organizations are sharing knowledge as one of the means
@@ -66,13 +36,15 @@ efforts. The need for infrastructure protection and real-time to near-real-time
 automated response to cyber threats to enable expedient top-level decisions has
 become imperative. However, a widely accepted framework for visualization,
 analytics, situational awareness, enabling intraregional response to shared
-threats does not exist today. To address these concerns, a system called the
-Distributed Incident Management System (DIMS) will be built. DIMS will be based
-mostly on existing technology and emerging standards. The primary users of DIMS
-are the Computer Security Incident Response Teams (CSIRTs) who need to maintain
-the security and functionality of a diverse and complicated, yet
-institutionally critical cyber infrastructure. DIMS will be based on open
-source technology and standards.
+threats does not exist today.
+
+To address these concerns, a system called the Distributed Incident Management
+System (DIMS) will be built. DIMS will be based mostly on existing technology,
+much of it from the open source software development community, and leveraging
+emerging standards. The primary users of DIMS are the Computer Security
+Incident Response Teams (CSIRTs) who need to maintain the security and
+functionality of a diverse and complicated, yet institutionally critical cyber
+infrastructure. DIMS will be based on open source technology and standards.
 
 .. _changedescription:
 
@@ -94,7 +66,7 @@ applied to four specific use cases that bridge local to national response.
 These use cases (shown in Figure :ref:`stixusecases`, taken from the STIX web
 site) are: *Analyzing Cyber Threats* (UC1); *Specifying Indicator Patterns for
 Cyber Threats* (UC2); *Managing Cyber Threat Response Activities* (UC3); and
-*Sharing Cyber Threat Information* (UC4). (MITRE)
+*Sharing Cyber Threat Information* (UC4). [The12]_
 
 .. _stixusecases:
 
@@ -133,13 +105,14 @@ artifact or remnant of an intrusion that can be identified on a host or
 network. [IOCs] tie to observables and observables tie to measurable events or
 stateful properties which can represent anything from the creation of a
 registry key on a host (measurable event) to the presence of a mutex (stateful
-property)." (Gragido, 2012) IOCs can include several pieces of raw intelligence
+property)." [Gra12]_ IOCs can include several pieces of raw intelligence
 that manifest at various points in time on information systems under attack,
-including "MD5 [and other :term:`cryptographic hash` values for files], File names, Packer
-types, Registry keys, Mutexes, DNS strings, and IP Addresses." (Mandiant, 2011)
+including "MD5 [and other :term:`cryptographic hash` values for files], File
+names, Packer types, Registry keys, Mutexes, DNS strings, and IP
+Addresses." [Man11]_
 
 IOCs are the lowest-level pieces of evidence used to paint a much larger
-picture as part of the response and remediation process (Aldridge, 2012).  They
+picture as part of the response and remediation process. [Ald12]_  They
 are the needles to attempt to find in a haystack, not a request to go find
 needles. Many of these indicators are found within the file system of a
 compromised computer, while others can be found in network flows and server
@@ -156,7 +129,7 @@ Communicating this organization to humans and automated processes is the
 value-add that workflow provides to our solutions.  Workflows are fractal. This
 means a workflow may consist of other workflows (each of which may consist of
 aggregated services). The workflow model encourages reuse and agility, leading
-to more flexible business processes." (Microsoft Developer Network n.d.)
+to more flexible business processes." [Mic]_
 
 In the case of the forensic analysis process that underlies response as
 described above, the workflow is fractal in terms of including other workflows,
@@ -197,10 +170,21 @@ defined by MITRE:
    and the PRISEM project), may come from other trust groups (be they
    sector-specific, regional, or self-organized), or may come from federal law
    enforcement agents in the local field office. As IOCs and Observables are
-   linked with TTPs and COAs (see Figure :ref:`stixrelationships`
-   for an example of this linkage), the
-   users can more quickly and efficiently respond and recover. (UC2, UC3, and
-   UC4)
+   linked with TTPs and COAs (see Figure :ref:`ioccoalinks`
+   for an example of the minimial linkages necessary to operationalize IOC and
+   Observable sharing), the users can more quickly and efficiently respond and
+   recover. (UC2, UC3, and UC4)
+
+   .. _ioccoalinks:
+    
+   .. figure:: images/STIX-Diagram-1-1-DIMS-w-bg.png
+      :alt: Minimal linkage from Observables to COA
+      :width: 95%
+      :align: center
+    
+      Linking minimal subset of STIX elements from Observables to COA
+    
+   ..
 
 #. To facilitate tracking of remediation efforts across participants. It is a
    common occurrence to receive a report with a list of IP addresses and/or
@@ -426,11 +410,12 @@ impediments to their use:
   Collective Intelligence Framework) suggest as an alternative is to "blow up
   the standards process" and simply implement something quickly, get it used
   by as many people as possible, adapt and modify it to address limitations
-  that are encountered, and keep moving forward. “We believe traditional
+  that are encountered, and keep moving forward. "We believe traditional
   standards processes not only have a high barrier to entry, but are often slow
   and use the design by committee approach. We believe the best way to create a
   protocol is from the ground up using CONOPs. Push design out to the edge and
-  let operations influence design in real-time.
+  let operations influence design in real-time."
+  (`CSIRT Gadgets Foundation`_ web site)
 
 .. _changepriorities:
 
@@ -467,8 +452,10 @@ Assumptions and constraints
 
 .. _STIX FAQ #B1: http://stix.mitre.org/about/faqs.html#B1
 .. _STIX FAQ #B2: http://stix.mitre.org/about/faqs.html#B2
+.. _CSIRT Gadgets Foundation: http://csirtgadgets.org/rfc/getting-started/
 
-.. [Dep13] Department of Homeland Security. Strengthening the Security and Resilience of the Nation's Critical Infrastructure. http://www.dhs.gov/strengthening-security-and-resilience-nation's-critical-infrastructure, August 2013.
-.. [Exe13a] Executive Office of the President. Executive Order No. 13636. http://www.fas.org/irp/offdocs/eo/eo-13636.pdf, February 2013.
-.. [Exe13b] Executive Office of the President. Presidential Policy Directive – Critical Infrastructure Security and Resilience/PPD-21. http://www.whitehouse.gov/the-press-office/2013/02/12/presidential-policy-directive-critical-infrastructure-security-and-resil, February 2013.
-
+.. [The12] The Mitre Corporation. Standarizing Cyber Threat Intelligence Information with the Structured Threat Information eXpression (STIX). http://makingsecuritymeasurable.mitre.org/docs/STIX-Whitepaper.pdf, 2012.
+.. [Gra12] Will Gragido. Understanding Indicators of Compromise (IOC) Part I. http://blogs.rsa.com/will-gragido/understanding-indicators-of-compromise-ioc-part-i/, October 2012.
+.. [Man11] Mandiant. Using Indicators of Compromise to Find Evil and Fight Crime. http://www.us-cert.gov/GFIRST/presentations/2011/Using_Indicators_of_Compromise.pdf, August 2011.
+.. [Ald12] Jim Aldridge. Targeted Intrusion Remediation: Lessons from the Front Lines. https://www.mandiant.com/blog/black-hat-usa-2012-presentation-targeted-intrusion-remediation-lessons-front-lines/, August 2012. Black Hat USA 2012 Presentation.
+.. [Mic] Microsoft Developer Network. Chapter 3: Workflow and Process. http://msdn.microsoft.com/en-us/library/bb833024.aspx.
