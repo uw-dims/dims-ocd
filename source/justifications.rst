@@ -3,26 +3,6 @@
 Justification for and nature of changes
 =======================================
 
-PRISEM is the first regional government collaboration in the United States to
-enter into a Cooperative Research and Development Agreement (CRADA) with
-US-CERT to receive de-classified IOCs. The intent is to receive and send these
-indicators using MITRE Corporation’s Structured Threat Information eXpression
-(STIX) format. The goal is to eventually link the IOCs with
-Tools/Tactics/Procedures (TTPs) and Courses of Action (CoA) to provide
-actionable intelligence to PRISEM members (see Figure :ref:`stixrelationships`
--- original source: Bret Jordan, Blue Coat Systems).
-
-.. _stixrelationships:
-
-.. figure:: images/STIX-Diagram-Horizontal-1-1.png
-   :alt: Relationship of STIX Elements
-   :width: 80%
-   :align: center
-
-   Relationship between STIX Elements
-
-..
-
 .. _changejustification:
 
 Justification for change
