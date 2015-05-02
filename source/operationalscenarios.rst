@@ -352,7 +352,7 @@ something about the data (e.g., *1.2M NTP amplifiers identified*) Members of
 the list will read these email messages, extract the list from the body of the
 message or attached files, process the list (often with a custom script), and
 do what they can to mitigate the threat within their own network. Some will
-respond to the email with something like "ACK for AS123, AS456, and AS678".
+respond to the email with something like "ACK for AS123, AS456, and AS789".
 
 While these acknowledgement messages are nice, nobody is responsible for
 tracking them, updating a list with status, etc. It is impossible for one to
