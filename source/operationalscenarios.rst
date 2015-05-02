@@ -473,10 +473,11 @@ to identify all records in search results that are associated with any of the
 PRISEM participants, count how many discrete hosts within each participant site
 were found, and produce cross-organizational correlation statistics that
 describe the percentage breakdown of all identified records in the search
-results. An example of what this process produces can be seen in Figure 14. In
-this example, hosts from seven different PRISEM sites were found, with the
-three most frequent results being in Seattle Childrens Hospital (70.65%),
-Kitsap County (26.61%), and Port of Olympia (1.38%).
+results. An example of what this process produces can be seen in Figure
+:ref:`matchingnotmatching`. In this example, hosts from seven different PRISEM
+sites were found, with the three most frequent results being in Seattle
+Childrens Hospital (70.65%), Kitsap County (26.61%), and Port of Olympia
+(1.38%).
 
 .. _matchingnotmatching:
 
