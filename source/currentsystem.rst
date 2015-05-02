@@ -1,4 +1,4 @@
-.. currentsystem:
+.. _currentsystem:
 
 Current system or situation
 ===========================
