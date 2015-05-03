@@ -77,7 +77,7 @@ log data using a commercial Security Information Event Management (SIEM)
 system, fed in part by event log data from the DHS-funded NetFlow based  system
 (formerly known as :term:`Einstein 1`), correlating these events using the SIEM to
 detect structural bot activity that has a high probability of being an infected
-computer. It uses the Collective Intelligence Framework (CIF) database system
+computer. It uses the Collective Intelligence Framework (:term:`CIF`) database system
 to produce watchlists for real-time monitoring, as well as to provide
 historical attack context. A geographic front end provides a regional context
 to alerts in the system for at-a-glance situational awareness. The system now
@@ -212,8 +212,8 @@ Description of current system or situation
 
 There are gaps in functionality in the existing sub-systems that DIMS is
 intended to address. The three primary sub-systems are: (1) the current PRISEM
-system; (2) The Collective Intelligence Framework (CIF) database; and (3) the
-Ops-Trust portal; Each of these will be examined in turn.
+system; (2) The CIF database; and (3) the Ops-Trust portal; Each of these will
+be examined in turn.
 
 .. _prisemnow:
 
@@ -225,6 +225,37 @@ The PRISEM System
 + Integrates the NetFlow :term:`Botnets System` behavioral detection capability
 + Requires intensive administration and coding when provisioning new tenants
 + Proprietary vendor portal the principal user interface
+
+The PRISEM system works by collecting logs from each participating site, and in
+some cases also processing NetFlow V5 records with the :term:`Botnets System`.
+At its most basic, the data flow and UI access for any given PRISEM participant
+site from participant to central collection and processing initially worked as
+shown in Figure :ref:`dataflows`.
+
+.. _dataflows:
+
+.. figure:: images/PRISEM-deployment-v2.png
+   :alt: Basic PRISEM data flow and UI access
+   :width: 60%
+   :align: center
+
+   Basic PRISEM data flow and UI access
+
+..
+
+Internally, the event data collection flow at a single site looks something
+like Figure :ref:`syslogcollection`.
+
+.. _syslogcollection:
+
+.. figure:: images/syslog-sources-v0.png
+   :alt: Syslog Event Collection
+   :width: 60%
+   :align: center
+
+   Syslog Event Collection
+
+..
 
 PRISEM is the first regional government collaboration in the United States to
 enter into a Cooperative Research and Development Agreement (CRADA) with
@@ -278,7 +309,8 @@ Collective Intelligence Framework (CIF) Database
 
 + "Indicators of Compromise"
 + Hashes of malicious software
-+ IP addresses, CIDR network address blocks, and DNS domain names associated with malicious activity (e.g., from sandboxes)
++ IP addresses, :term:`CIDR` network address blocks, and DNS domain names
+  associated with malicious activity (e.g., from sandboxes)
 + Builds context about attacker activity over time
 + Produces feeds of indicators for watchlists, searching hard drives, rules for security devices, etc.
 
