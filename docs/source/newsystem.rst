@@ -78,14 +78,6 @@ Description of the new or modified system
 Users/Affected Personnel for New System
 ---------------------------------------
 
-.. todo::
-
-   This paragraph shall describe the types of users of the new or modified
-   system, including, as applicable, organizational structures,
-   training/skills, responsibilities, and interactions with one another.
-
-..
-
 The full list of stakeholders and prospective users of the new
 system includes:
 
@@ -162,24 +154,28 @@ system includes:
 Support concept
 ---------------
 
-.. todo::
-
-    .. note::
-
-        This paragraph shall provide an overview of the support concept for the
-        new or modified system, including, as applicable, support agency(ies);
-        facilities; equipment; support software; repair/replacement criteria;
-        maintenance levels and cycles; and storage, distribution, and supply
-        methods.
-
-    ..
-
-..
-
 Efforts are underway to create a non-profit, tax-exempt non-governmental
 organization who is capable of engaging with SLTT government entities via
 inter-local agreements. This entity will operate on a self-sustaining,
 fee-based model that has been described by Parker Montgomery in his report,
 "Organization Design: A Sustainable and Self-Sufficient Model for Washington
 State’s PRISEM Partnership" (see :ref:`referenceddocs`).
+
+The open source tools used to create DIMS, as well as the source code
+and development infrastructure used to create DIMS, will all be released
+to the public and will be deployable on modestly priced commodity hardware.
+This makes for an affordable solution for SLTT government groups or other
+organizations who wish to participate in trusted information sharing
+in a scalable manner. There will be some ongoing costs associated with
+maintaining and administering a DIMS deployment, but the goal is to
+provide as much documentation as possible to keep the support costs
+down.
+
+.. note::
+
+    A commercialization plan (which will include options for outsourced
+    support) will be produced before the end of the period of performance for
+    this contract.
+
+..
 
