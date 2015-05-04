@@ -228,18 +228,19 @@ The PRISEM System
 
 The PRISEM system works by collecting logs from each participating site, and in
 some cases also processing NetFlow V5 records with the :term:`Botnets System`.
-At its most basic, the data flow and UI access for any given PRISEM participant
+At its most basic, the data flow for any given PRISEM participant
 site from participant to central collection and processing initially worked as
-shown in Figure :ref:`dataflows`.
+shown in Figure :ref:`prisemarchitecture` (source: presentation on PRISEM circa
+2012).
 
-.. _dataflows:
+.. _prisemarchitecture:
 
-.. figure:: images/PRISEM-deployment-v2.png
-   :alt: Basic PRISEM data flow and UI access
-   :width: 70%
+.. figure:: images/prisem-architecture.png
+   :alt: Original PRISEM architecture
+   :width: 90%
    :align: center
 
-   Basic PRISEM data flow and UI access
+   Original PRISEM architecture
 
 ..
 
@@ -250,7 +251,7 @@ like Figure :ref:`syslogcollection`.
 
 .. figure:: images/syslog-sources-v0.png
    :alt: Syslog Event Collection
-   :width: 70%
+   :width: 80%
    :align: center
 
    Syslog Event Collection
