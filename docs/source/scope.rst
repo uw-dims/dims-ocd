@@ -78,13 +78,6 @@ The structure of this document has been adapted principally from MIL-STD-498
   scenarios that will drive requirements and the system's
   architectural design.
 
-+ Section :ref:`impacts` provides a summary of impacts
-  brought about by the new system.
-
-+ Section :ref:`analysis` analyzes the advantages, disadvantages,
-  limitations, and alternatives/tradeoffs related to the new
-  system.
-
 + Section :ref:`notes` provides an alphabetical listing of acronyms and
   abbreviations used in this document.
 
