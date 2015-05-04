@@ -64,8 +64,6 @@ DIMS Operational Concept Description v |release|
    justifications
    newsystem
    operationalscenarios
-   impacts
-   analysis
    notes
    license
    appendices
