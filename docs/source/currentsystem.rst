@@ -65,7 +65,7 @@ productivity, improved performance, and lower costs for participants.
 
 .. figure:: images/PRISEM-venn-v1.png
    :alt: PRISEM capabilities
-   :width: 60%
+   :width: 70%
    :align: center
 
    PRISEM capabilities
@@ -236,7 +236,7 @@ shown in Figure :ref:`dataflows`.
 
 .. figure:: images/PRISEM-deployment-v2.png
    :alt: Basic PRISEM data flow and UI access
-   :width: 60%
+   :width: 70%
    :align: center
 
    Basic PRISEM data flow and UI access
@@ -250,7 +250,7 @@ like Figure :ref:`syslogcollection`.
 
 .. figure:: images/syslog-sources-v0.png
    :alt: Syslog Event Collection
-   :width: 60%
+   :width: 70%
    :align: center
 
    Syslog Event Collection
@@ -270,7 +270,7 @@ actionable intelligence to PRISEM members (see Figure :ref:`stixrelationships`
 
 .. figure:: images/STIX-Diagram-Horizontal-1-1.png
    :alt: Relationship of STIX Elements
-   :width: 80%
+   :width: 95%
    :align: center
 
    Relationship between STIX Elements
