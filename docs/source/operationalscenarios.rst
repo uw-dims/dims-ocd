@@ -508,7 +508,7 @@ service is tagged in Figure :ref:`crosscorriff`.
 
 .. figure:: images/example-crosscor-iff-friend.png
    :alt: Cross-organizational Correlation of Query Results (Redacted)
-   :width: 70%
+   :width: 50%
    :align: center
 
    Cross-organizational Correlation of Query Results (Redacted)
