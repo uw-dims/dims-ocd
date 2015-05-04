@@ -8,7 +8,7 @@ Analysis of the proposed system
 Summary of advantages
 ---------------------
 
-.. note:: TBD
+.. todo::
 
    This paragraph shall provide a qualitative and quantitative summary of the
    advantages to be obtained from the new or modified system. This summary
@@ -21,7 +21,7 @@ Summary of advantages
 Summary of disadvantages/limitations
 ------------------------------------
 
-.. note:: TBD
+.. todo::
 
    This paragraph shall provide a qualitative and quantitative summary of
    disadvantages or limitations of the new or modified system. These
@@ -35,7 +35,7 @@ Summary of disadvantages/limitations
 Alternatives and trade-offs considered
 --------------------------------------
 
-.. note:: TBD
+.. todo::
 
    This paragraph shall identify and describe major alternatives considered to
    the system or its characteristics, the trade-offs among them, and rationale

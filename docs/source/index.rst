@@ -1,8 +1,10 @@
 .. DIMS Operational Concept Description documentation master file.
 
-====================================
-DIMS Operational Concept Description
-====================================
+.. _dimsoperationalconceptdescription:
+
+================================================
+DIMS Operational Concept Description v |release|
+================================================
 
 .. topic:: Executive Summary
 
@@ -62,8 +64,6 @@ DIMS Operational Concept Description
    justifications
    newsystem
    operationalscenarios
-   impacts
-   analysis
    notes
    license
    appendices
