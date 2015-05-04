@@ -31,14 +31,6 @@ infrastructure. DIMS will be based on open source technology and standards.
 Description of needed changes
 -----------------------------
 
-.. todo::
-
-   This paragraph shall summarize new or modified capabilities/functions,
-   processes, interfaces, or other changes needed to respond to the factors
-   identified in :ref:`changejustification`.
-
-..
-
 As mentioned in the previous section, MITRE has been working with US-CERT to
 develop standards that enable the kind of response and recovery process called
 for by EO 13636 and PPD 21. To that end, they have illustrated how STIX can be
