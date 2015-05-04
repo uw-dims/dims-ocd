@@ -81,7 +81,7 @@ and a base operating system within which all of these components are installed.
 
 .. figure:: images/open-source-tool-integration-v1.png
    :alt: Recombination of open source systems
-   :width: 95%
+   :width: 100%
    :align: center
 
    Recombination of open source systems
