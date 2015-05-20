@@ -206,6 +206,7 @@ Constraints
   of the system only under export control restricting agreements negotiated by
   the appropriate authorities at the UW.
 
+.. _descriptioncurrentsystem:
 
 Description of current system or situation
 ------------------------------------------
