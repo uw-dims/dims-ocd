@@ -228,9 +228,6 @@ List of Acronyms
    SOC
        Security Operations Center
 
-   SoD
-       Security on Demand (PRISEM project support vendor)
-
    SSH
        Secure Shell
 
