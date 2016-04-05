@@ -66,5 +66,4 @@ DIMS Operational Concept Description v |release|
    operationalscenarios
    notes
    license
-   appendices
 
