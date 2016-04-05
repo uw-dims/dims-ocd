@@ -125,24 +125,10 @@ suspected botnet related event helps illustrate the process:
 
    ..
 
-#. The analyst can then search for the same information, this time using the
-   PRISEM vendor portal. Figure :ref:`prisemportal` shows the report interface,
-   where a search rule is entered for the IP address found in the network flow
-   report. If the user wanted to search for the entire CIDR block, they would
-   have to enter 256 search terms for each IP address in this interface, since
-   it was not designed to process CIDR blocks (just look for individual IP
-   addresses, or simple substrings thereof).
-
-   .. _prisemportal:
-
-   .. figure:: images/PRISEM-portal.png
-      :alt: PRISEM portal log query
-      :width: 90%
-      :align: center
-
-      PRISEM portal log query
-
-   ..
+#. The analyst can then search for the same information, this time using a
+   dashboard portal. Using the dashboard user interface,
+   a search is initiated for the IP address found in the network flow
+   report.
 
 #. The search results can be saved to a comma-separated value (CSV) file for
    further manual processing.
