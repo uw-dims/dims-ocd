@@ -31,13 +31,16 @@ side of the equation.
 
 The DIMS project is intended to take this semi-automated sharing of structured
 threat information, building on the success of the Public Regional Information
-Security Event Monitoring (PRISEM) project and leveraging an existing community
-of operational security professionals known as Ops- Trust, and scale it to the
+Security Event Monitoring (PRISEM) project and leveraging the portal used by
+an existing community
+of operational security professionals known as `Ops-Trust`_, and scale it to the
 next level. The intent of this software project is to allow for near real-time
 sharing of critical alerts and structured threat information that will allow
 each contributing party to receive information, alerts and data, analyze the
 data, and respond appropriately and in a timely manner through one
-user-friendly web application, DIMS.
+user-friendly web application.
+
+.. _Ops-Trust: https://ops-trust.net
 
 Working with the use cases defined by MITRE and PRISEM users, building the
 features necessary to simplify structured information sharing, and
