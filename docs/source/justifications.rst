@@ -439,7 +439,7 @@ in this section:
   database mechanisms, and may have little or poor documentation.
 
 + Attempting to balance all of the differences mentioned in the previous bullet
-  will push all team members to the limits of their technical ability.
+  will push all team members to the limits of their technical abilities.
 
 + Hardware, network resources, and data center limitations can cause friction
   due to limitations on access to data center facilities, the distributed
