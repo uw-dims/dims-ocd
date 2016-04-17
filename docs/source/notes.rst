@@ -198,11 +198,14 @@ List of Acronyms
    OODA
        Observe, Orient, Decide, and Act (also known as the “Boyd Cycle”)
 
+   PISCES
+       Public Infrastructure Security Collaboration and Exchange System
+
    PPD
        Presidential Policy Directive
 
    PRISEM
-       Public Regional Information Security Event Management
+       Public Regional Information Security Event Management (former name, now deprecated - see PISCES)
 
    RBAC
        Role Based Access Control

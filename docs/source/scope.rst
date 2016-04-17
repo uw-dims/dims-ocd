@@ -31,9 +31,9 @@ side of the equation.
 
 The DIMS project is intended to take this semi-automated sharing of structured
 threat information, building on the success of the Public Regional Information
-Security Event Monitoring (PRISEM) project and leveraging the portal used by
+Security Event Monitoring (PRISEM) project [Note1]_ and leveraging the portal used by
 an existing community
-of operational security professionals known as `Ops-Trust`_, and scale it to the
+of operational security professionals known as `Ops-Trust`_, [Note2]_ and scale it to the
 next level. The intent of this software project is to allow for near real-time
 sharing of critical alerts and structured threat information that will allow
 each contributing party to receive information, alerts and data, analyze the
@@ -86,3 +86,9 @@ The structure of this document has been adapted principally from MIL-STD-498
 
 + Section :ref:`license` includes the copyright and software license under
   which DIMS is being released.
+
+.. [Note1] The PRISEM project is being superceded by a not-for-profit known as the Public Infrastructure Security Collaboration and Exchange System (PISCES). The name `PRISEM` remains in this, and some of the other DIMS documents, but is being replaced as documents are updated.
+
+.. [Note2] The original portal used by the Ops-Trust community is being re-written and renamed the `Trident`_ portal system. It is planned to be released in open source form in Q2-Q4 of 2016.
+
+.. _Trident: https://www.trident.li
