@@ -125,24 +125,10 @@ suspected botnet related event helps illustrate the process:
 
    ..
 
-#. The analyst can then search for the same information, this time using the
-   PRISEM vendor portal. Figure :ref:`prisemportal` shows the report interface,
-   where a search rule is entered for the IP address found in the network flow
-   report. If the user wanted to search for the entire CIDR block, they would
-   have to enter 256 search terms for each IP address in this interface, since
-   it was not designed to process CIDR blocks (just look for individual IP
-   addresses, or simple substrings thereof).
-
-   .. _prisemportal:
-
-   .. figure:: images/PRISEM-portal.png
-      :alt: PRISEM portal log query
-      :width: 90%
-      :align: center
-
-      PRISEM portal log query
-
-   ..
+#. The analyst can then search for the same information, this time using a
+   dashboard portal. Using the dashboard user interface,
+   a search is initiated for the IP address found in the network flow
+   report.
 
 #. The search results can be saved to a comma-separated value (CSV) file for
    further manual processing.
@@ -224,7 +210,9 @@ There are actually two sub-use cases for automated IOC sharing (one an
 external-to-internal sharing followed by a reciprocal return
 internal-to-external sharing, and the other an internal-to-external sharing).
 Both have privacy sensitivities that require anonymization and controlled
-release of information.  The first is the situation where US-CERT will be
+release of information.
+
+The first is the situation where US-CERT will be
 sending de-classified IOCs to the PRISEM system in the form of STIX files,
 [The12]_ to determine if known malicious activity seen at the federal
 level is also being seen at the SLTT government level. This is automated input
@@ -247,7 +235,7 @@ holds IP addresses and CIDR blocks extracted from a CIF database for use as a
 ..
 
 The second is automated determination of the `sources` of confirmed malicious
-activity seen at the SLTT level that is collected on a daily basis and prepared
+activity seen at the SLTT level that are collected on a daily basis and prepared
 for sharing with federal law enforcement and counter-intelligence agents to
 determine if known cases being investigated by federal agencies involve parties
 locally.  The targets of the attacks (i.e., the sources of the IOCs within the
@@ -256,18 +244,11 @@ PRISEM participant base) are `not shared`, but only data about the outside
 open investigation, they will discretely reach out to a designated contact
 within the PRISEM system who can assist in reaching out to establish
 connections with the source (should they chose to make such a connection.)
-
-.. todo::
-
-    .. note::
-
-        Talk to Anderson Nascimento about getting a sentence or two about the
-        encrypted set comparison idea we have been talking about.
-
-    ..
-
-..
-
+In the future, mechanisms that support `privacy-perserving set intersection`
+operations based on homomorphic encryption algorithms have proven
+useful in comparing data sets containing sensitive information without
+exposing that information to either of the parties involved in the
+comparison. [dCT10]_
 .. _manualentryofiocs:
 
 Manual entry of IOCs
@@ -641,5 +622,6 @@ identified log events (including ports, protocols, start time, duration, etc.).
 .. [Ric09] Chet Richards. Briefings - Colonel John R. Boyd, USAF. http://www.ausairpower.net/APA-Boyd-Papers.html, November 2009.
 .. [Blu13a] Bluehat1. New MAPP Initiatives. http://blogs.technet.com/b/bluehat/archive/2013/07/29/new-mapp-initiatives.aspx, July 2013. BlueHat Blog.
 .. [Blu13b] Bluehat1. MAPP Initiatives Update – Knowledge Exchange Platform. http://blogs.technet.com/b/bluehat/archive/2013/09/16/mapp-initiatives-update-knowledge-exchange-platform.aspx, September 2013. BlueHat Blog.
+.. [dCT10] Emiliano De Cristofaro and Gene Tsudik. Practical private set intersection protocols with linear computational and bandwidth complexity. https://eprint.iacr.org/2009/491.pdf, 2010.
 .. [HCA11] Eric Hutchins, Michael Cloppert, and Rohan Amin. Intelligence-Driven Computer Network Defense Informed by Analysis of Adversary Campaigns and Intrusion Kill Chains. In 6th Annual International Conference on Information Warfare and Security. Lockheed Martin Corporation, http://www.lockheedmartin.com/content/dam/lockheed/data/corporate/documents/LM-White-Paper-Intel-Driven-Defense.pdf, December 2011.
 .. [Man13] Mandiant. APT1: Exposing One of China’s Cyber Espionage Units. http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf, February 2013.

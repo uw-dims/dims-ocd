@@ -29,21 +29,22 @@ DIMS Operational Concept Description v |release|
     the past and/or watching for new events in the future.
 
     DHS efforts with MITRE to develop information sharing mechanisms based on
-    the *Structured Threat Information eXpression (STIX)* format, leveraged by a
-    *Cooperative Research and Development Agreement (CRADA)* between US-CERT and the
-    PRISEM Project, are underway to bring de-classified *Indicators of
-    Compromise (IOCs)* and *Observables* from DHS and FBI to regional SLTT
-    government entities for confirmation of involvement of threat actors of
-    national interest. As sharing of these IOCs and Observables is extended
+    the *Structured Threat Information eXpression (STIX)* format have made
+    de-classified *Indicators of Compromise (IOCs)* and *Observables* 
+    available to regional SLTT government entities, allowing them to
+    confirmation involvement of threat actors of national interest.
+    As this sharing of IOCs and linked Observables is extended
     laterally to similar regional collaborative efforts, national scope and
     visibility of the impact of widespread threats becomes possible.
 
     The *Distributed Incident Management System (DIMS)* project is intended
-    to take this semi-automated sharing of structured threat information,
-    building on the success of the PRISEM project and leveraging an existing
+    to do two things. First, to take this semi-automated sharing of structured
+    threat information,
+    building on the success of the PRISEM project and leveraging the portal
+    system used by an existing
     community of operational security professionals known as *Ops-Trust*, and
     scale it to the next level. DIMS will take advantage of the open "message
-    bus" architecture used by PRISEM, features that support "identification of
+    bus" architecture developed under PRISEM, features that support "identification of
     friend or foe," and the ability to integrate three data sources maintained
     by PRISEM (network flow history, event history, and attacker context
     history) to support the triage process, cross-organizational correlation of
@@ -53,6 +54,11 @@ DIMS Operational Concept Description v |release|
     and operationalizing these within these existing communities, will allow
     DIMS to fill existing gaps in capabilities and support existing missions
     that are slowed down today by many complicated, manual processes.
+    The DIMS project also aims to establish a model open source framework
+    and "scaffolding" that will promote the integration of open source
+    computer security tools to provide a feature-rich, flexible, scalable,
+    and affordable toolset for regional responce and information sharing
+    efforts.
 
 .. toctree::
    :numbered:
@@ -66,5 +72,4 @@ DIMS Operational Concept Description v |release|
    operationalscenarios
    notes
    license
-   appendices
 

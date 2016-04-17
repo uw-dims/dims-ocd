@@ -8,17 +8,6 @@ Concept for a new or modified system
 Background, objectives, and scope
 ---------------------------------
 
-.. todo::
-
-    .. note::
-
-        This paragraph shall describe the background, mission or objectives,
-        and scope of the new or modified system.
-
-    ..
-
-..
-
 One of the objectives of DIMS is to combine the best features of several
 open source projects using a `framework` model that integrates
 these components into a coherent whole. All of these systems were built
@@ -111,61 +100,10 @@ architecture.)
 Operational policies and constraints
 ------------------------------------
 
-.. todo::
-
-    .. note::
-
-        This paragraph shall describe any operational policies and constraints
-        that apply to the new or modified system.
-
-    .. 
-
-..
-
 .. _descriptionnewsystem:
 
 Description of the new or modified system
 -----------------------------------------
-
-.. todo::
-
-    .. note::
-
-        This paragraph shall provide a description of the new or modified
-        system, identifying differences associated with different states or
-        modes of operation (for example, regular, maintenance, training,
-        degraded, emergency, alternative-site, wartime, peacetime). The
-        distinction between states and modes is arbitrary. A system may be
-        described in terms of states only, modes only, states within modes,
-        modes within states, or any other scheme that is useful. If the system
-        operates without states or modes, this paragraph shall so state,
-        without the need to create artificial distinctions. The description
-        shall include, as applicable:
-    
-        + The operational environment and its characteristics
-     
-        + Major system components and the interconnections among these
-          components
-      
-        + Interfaces to external systems or procedures
-        
-        + Capabilities functions of the new or modified system
-        
-        + Charts and accompanying descriptions depicting inputs, outputs, data flow,
-          and manual and automated processes sufficient to understand the new or
-          modified system or situation from the user's point of view
-        
-        + Performance characteristics, such as speed, throughput, volume, frequency
-          
-        + Quality attributes, such as reliability, maintainability, availability,
-          flexibility, portability, usability, efficiency
-          
-        + Provisions for safety, security, privacy, and continuity of operations in
-          emergencies
-     
-    ..
-
-..
 
 Figure :ref:`DimsSystemOverview` depicts a high-level diagram of the
 system architecture for the DIMS system. DIMS provides a user

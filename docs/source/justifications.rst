@@ -389,39 +389,6 @@ impediments to their use:
   let operations influence design in real-time."
   (`CSIRT Gadgets Foundation`_ web site)
 
-.. #### The following sections are commented out unless/until we need them.
-.. #### This is to keep from having empty sections in the released doc.
-.. ####
-.. #### .. _changepriorities:
-.. #### 
-.. #### Priorities among the changes
-.. #### ----------------------------
-.. #### 
-.. #### .. todo::
-.. #### 
-.. ####     .. note::
-.. #### 
-.. ####         This paragraph shall identify priorities among the needed changes. It
-.. ####         shall, for example, identify each change as essential, desirable, or
-.. ####         optional, and prioritize the desirable and optional changes.
-.. #### 
-.. ####     ..
-.. #### 
-.. #### ..
-.. #### 
-.. #### Changes considered but not included
-.. #### -----------------------------------
-.. #### 
-.. #### .. todo::
-.. #### 
-.. ####     .. note::
-.. #### 
-.. ####         This paragraph shall identify changes considered but not included in
-.. ####         :ref:`changedescription`, and rationale for not including them.
-.. #### 
-.. ####     ..
-.. #### 
-.. #### ..
 
 .. _assumptionsconstraints:
 
@@ -439,7 +406,7 @@ in this section:
   database mechanisms, and may have little or poor documentation.
 
 + Attempting to balance all of the differences mentioned in the previous bullet
-  will push all team members to the limits of their technical ability.
+  will push all team members to the limits of their technical abilities.
 
 + Hardware, network resources, and data center limitations can cause friction
   due to limitations on access to data center facilities, the distributed

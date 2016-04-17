@@ -193,9 +193,20 @@ Constraints
   sharing within these policy constraints.
 
 + The DIMS team is operating under an NDA with the Ops-Trust organization for
-  access to the source code for their portal. Ops-Trust has released the source
-  for the portal on GitHub (https://github.com/ops-trust/portal.git). Other
-  information not made public yet cannot be released without their permission.
+  access to the source code for their portal. In 2014, the Ops-Trust
+  developers released the source for the initial portal on GitHub
+  (https://github.com/ops-trust/portal.git). Other information not made public
+  yet cannot be released without their permission.
+
+  .. note::
+
+      Farsight Security has been working on a reimplemntation of the original
+      Ops-Trust portal system, known as `Trident`_, and plans to release it in
+      open source form in 2016.
+
+  ..
+
+.. _Trident:  https://trident.li
 
 + The DIMS team is operating under export control restrictions that apply to
   any/all encryption software used in the system. Based on consultation with UW
