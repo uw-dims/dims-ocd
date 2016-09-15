@@ -14,6 +14,16 @@
 
 import sys
 import os
+import shlex
+from sphinx import __version__
+
+# ReadTheDocs configuration setting:
+
+on_rtd = os.environ.get('READTHEDOCS') == "True"
+if on_rtd:
+    html_theme = 'default'
+else:
+    html_theme = 'sphinx_rtd_theme'
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -31,13 +41,11 @@ sys.path.insert(0, os.path.abspath('.'))
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.doctest',
-    'sphinx.ext.todo',
     'sphinx.ext.intersphinx',
+    'sphinx.ext.todo',
     'sphinx.ext.graphviz',
     'sphinx.ext.ifconfig',
 ]
-
-todo_include_todos = True
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -102,6 +110,12 @@ pygments_style = 'sphinx'
 # If true, keep warnings as "system message" paragraphs in the built documents.
 #keep_warnings = False
 
+# If true, `todo` and `todoList` produce output, else they produce nothing.
+
+if not on_rtd and os.environ.get('INCLUDETODOS') == "True":
+    todo_include_todos = True
+else:
+    todo_include_todos = False
 
 # -- Options for HTML output ----------------------------------------------
 
@@ -173,7 +187,8 @@ html_static_path = ['_static']
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
 #html_show_sphinx = True
 
-# If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
+# If true, "(C) Copyright ..." is shown in the HTML footer.
+# Default is True.
 #html_show_copyright = True
 
 # If true, an OpenSearch description file will be output, and all pages will
@@ -191,30 +206,38 @@ htmlhelp_basename = 'DIMSOperationalConceptDescriptiondoc'
 # -- Options for LaTeX output ---------------------------------------------
 
 latex_elements = {
-# The paper size ('letterpaper' or 'a4paper').
-#'papersize': 'letterpaper',
+    # The paper size ('letterpaper' or 'a4paper').
+    #'papersize': 'letterpaper',
 
-# The font size ('10pt', '11pt' or '12pt').
-#'pointsize': '10pt',
+    # The font size ('10pt', '11pt' or '12pt').
+    #'pointsize': '10pt',
 
-# Additional stuff for the LaTeX preamble.
-#
-# The following comes from
-# https://github.com/rtfd/readthedocs.org/issues/416
-#
-'preamble': "".join((
-    '\DeclareUnicodeCharacter{00A0}{ }',  # NO-BREAK SPACE
-    '\DeclareUnicodeCharacter{251C}{+}',  # BOX DRAWINGS LIGHT VERTICAL AND RIGHT
-    '\DeclareUnicodeCharacter{2514}{+}',  # BOX DRAWINGS LIGHT UP AND RIGHT
-)),
+    # Additional stuff for the LaTeX preamble.
+    #
+    # The following comes from
+    # https://github.com/rtfd/readthedocs.org/issues/416
+    # and http://www.utf8-chartable.de/unicode-utf8-table.pl?start=9472&names=-
+    #
+    'preamble': "".join((
+        '\usepackage{pifont}',                # To get Dingbats
+        '\DeclareUnicodeCharacter{00A0}{ }',  # NO-BREAK SPACE
+        '\DeclareUnicodeCharacter{2014}{\dash}', # LONG DASH
+        '\DeclareUnicodeCharacter{251C}{+}',  # BOX DRAWINGS LIGHT VERTICAL AND RIGHT
+        '\DeclareUnicodeCharacter{2514}{+}',  # BOX DRAWINGS LIGHT UP AND RIGHT
+        '\DeclareUnicodeCharacter{1F37A}{ }', # Beer emoji (just turn into space for now)
+        '\DeclareUnicodeCharacter{2588}{\textblock}',  # SOLID TEXT BLOCK
+        '\DeclareUnicodeCharacter{25CF}{\ding{108}}',  # Dingbat 108 (black circle)
+    )),
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('index', 'DIMSOperationalConceptDescription.tex', u'DIMS Operational Concept Description Documentation',
-   u'David Dittrich', 'manual'),
+  ('index',
+   'DIMSOperationalConceptDescription.tex', u'DIMS Operational Concept Description Documentation',
+   u'David Dittrich',
+   'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -243,8 +266,11 @@ latex_logo = 'UW-logo.png'
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'dimsoperationalconceptdescription', u'DIMS Operational Concept Description Documentation',
-     [u'David Dittrich'], 1)
+    ('index',
+     'dimsoperationalconceptdescription',
+     u'DIMS Operational Concept Description Documentation',
+     [u'David Dittrich'],
+     1)
 ]
 
 # If true, show URL addresses after external links.
@@ -257,9 +283,13 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'DIMSOperationalConceptDescription', u'DIMS Operational Concept Description Documentation',
-   u'David Dittrich', 'DIMSOperationalConceptDescription', 'One line description of project.',
-   'Miscellaneous'),
+    ('index',
+     'DIMSOperationalConceptDescription',
+     u'DIMS Operational Concept Description Documentation',
+     u'David Dittrich',
+     'DIMSOperationalConceptDescription',
+     'DIMS Operational Concept Description',
+     'Miscellaneous'),
 ]
 
 # Documents to append as an appendix to all manuals.
@@ -274,6 +304,8 @@ texinfo_documents = [
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
 
+git_branch = os.environ.get('GITBRANCH', "develop")
+git_tag = os.environ.get('GITTAG', "latest")
 
 # -- Options for Epub output ----------------------------------------------
 
@@ -281,7 +313,7 @@ texinfo_documents = [
 epub_title = u'DIMS Operational Concept Description'
 epub_author = u'David Dittrich'
 epub_publisher = u'David Dittrich'
-epub_copyright = u'2014, 2015 David Dittrich'
+epub_copyright = u'2014, 2016 David Dittrich'
 
 # The basename for the epub file. It defaults to the project name.
 #epub_basename = u'DIMS Operational Concept Description'
@@ -344,15 +376,22 @@ epub_exclude_files = ['search.html']
 # If false, no index is generated.
 #epub_use_index = True
 
+# The following allows selection of which URL base is used
+# to find intersphinx inventory files (i.e., the location where
+# linked HTML docs will be found).
+
 os.environ['GITBRANCH'] = "develop"
 
 if os.environ.get('DOCSURL') is None:
-    #os.environ['DOCSURL'] = "file://{}".format(os.environ.get('GIT'))
-    os.environ['DOCSURL'] = "http://u12-dev-svr-1.prisem.washington.edu:8080/docs/{}/html".format(
-        os.environ['GITBRANCH'])
+    if not on_rtd:
+        os.environ['DOCSURL'] = "http://demo.devops.develop:8080/docs/{}/html".format(git_branch)
 
 intersphinx_cache_limit = -1   # days to keep the cached inventories (0 == forever)
-intersphinx_mapping = {
-        'dimssr': ("{}/dims-sr".format(os.environ['DOCSURL']), None)
-}
-
+if on_rtd:
+    intersphinx_mapping = {
+        'dimssr': ("https://dims-sr.readthedocs.io/en/{0}".format(git_tag), None),
+    }
+else:
+    intersphinx_mapping = {
+        'dimssr': ("{}/dims-sr".format(os.environ['DOCSURL']), None),
+    }
