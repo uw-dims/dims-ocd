@@ -382,9 +382,11 @@ if on_rtd:
     intersphinx_mapping = {
             'dimssr': ("https://dims-sr.readthedocs.io/en/{0}".format(git_tag), None),
             'dimstp': ("https://dims-tp.readthedocs.io/en/{0}".format(git_tag), None),
+            'dimsswplan': ("https://dims-swplan.readthedocs.io/en/{0}".format(git_tag), None),
     }
 else:
     intersphinx_mapping = {
             'dimssr': ("{}/dims-sr".format(os.environ['DOCSURL']), None),
             'dimstp': ("{}/dims-tp".format(os.environ['DOCSURL']), None),
+            'dimsswplan': ("{}/dims-swplan".format(os.environ['DOCSURL']), None),
     }
