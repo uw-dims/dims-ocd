@@ -288,11 +288,4 @@ maintaining and administering a DIMS deployment, but the goal is to
 provide as much documentation as possible to keep the support costs
 down.
 
-.. note::
-
-    A commercialization plan (which will include options for outsourced
-    support) will be produced before the end of the period of performance for
-    this contract.
-
-..
-
+For more information, see the :ref:`dimsswplan:dimsswplan` document.
