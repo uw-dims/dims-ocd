@@ -91,4 +91,4 @@ The structure of this document has been adapted principally from MIL-STD-498
 
 .. [Note2] The original portal used by the Ops-Trust community is being re-written and renamed the `Trident`_ portal system. It is planned to be released in open source form in Q2-Q4 of 2016.
 
-.. _Trident: https://www.trident.li
+.. _Trident: https://trident.li
